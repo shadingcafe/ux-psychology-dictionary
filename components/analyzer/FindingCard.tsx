@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import principlesData from "@/data/principles.json";
 
 interface Finding {
   principleId: string;
@@ -13,6 +14,13 @@ interface Props {
   finding: Finding;
 }
 
+const principles = principlesData as { id: string; name: { ja: string; en: string } }[];
+
+function getPrincipleName(id: string): { ja: string; en: string } {
+  const p = principles.find((p) => p.id === id);
+  return p ? p.name : { ja: id, en: id };
+}
+
 const confidenceConfig = {
   high: { label: "高", color: "bg-green-500/10 text-green-400 border-green-500/30" },
   medium: { label: "中", color: "bg-amber-500/10 text-amber-400 border-amber-500/30" },
@@ -21,14 +29,16 @@ const confidenceConfig = {
 
 export function FindingCard({ finding }: Props) {
   const conf = confidenceConfig[finding.confidence];
+  const name = getPrincipleName(finding.principleId);
 
   return (
     <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-5 hover:border-zinc-700 transition-colors">
       <div className="flex items-start justify-between gap-4 mb-3">
         <div>
           <p className="text-card-title text-zinc-100">
-            {finding.principleId.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+            {name.ja}
           </p>
+          <p className="text-caption text-zinc-500">{name.en}</p>
           <p className="text-caption text-zinc-500 mt-0.5">
             📍 {finding.location}
           </p>
