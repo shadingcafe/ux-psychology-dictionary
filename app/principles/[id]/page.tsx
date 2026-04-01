@@ -22,9 +22,28 @@ export async function generateMetadata({
   const { id } = await params;
   const principle = principles.find((p) => p.id === id);
   if (!principle) return { title: "Not Found" };
+
+  const category = categories.find((c) => c.id === principle.category);
+  const ogParams = new URLSearchParams({
+    type: "principle",
+    title: principle.name.ja,
+    subtitle: principle.summary,
+    category: category?.nameJa || "",
+    icon: category?.icon || "📖",
+  });
+
   return {
     title: `${principle.name.ja} (${principle.name.en})`,
     description: principle.summary,
+    openGraph: {
+      title: `${principle.name.ja} — UX心理学図鑑`,
+      description: principle.summary,
+      images: [{ url: `/api/og?${ogParams.toString()}`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [`/api/og?${ogParams.toString()}`],
+    },
   };
 }
 

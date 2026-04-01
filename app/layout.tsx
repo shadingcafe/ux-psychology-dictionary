@@ -22,14 +22,17 @@ export const metadata: Metadata = {
   },
   description:
     "そのデザイン、なぜ効くか説明できますか？ 68件のUX心理学法則を「名称×解説×UI実例×AIプロンプト例×権威リファレンス」で収録。",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ux-psychology-dictionary.vercel.app"),
   openGraph: {
     title: "UX心理学図鑑",
     description: "そのデザイン、なぜ効くか説明できますか？",
     type: "website",
     locale: "ja_JP",
+    images: [{ url: "/api/og", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/api/og"],
   },
 };
 

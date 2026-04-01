@@ -52,12 +52,28 @@ export async function generateMetadata({
       4 * 10
   ) / 10;
 
+  const ogParams = new URLSearchParams({
+    type: "result",
+    url: analysis.url,
+    cl: String(analysis.scores.cognitiveLoad),
+    pe: String(analysis.scores.persuasion),
+    us: String(analysis.scores.usability),
+    em: String(analysis.scores.emotionalDesign),
+    findings: String(analysis.findings.length),
+  });
+
   return {
     title: `${new URL(analysis.url).hostname} の診断結果`,
     description: analysis.summary?.slice(0, 120) || "UX心理学テクニックのAI診断結果",
     openGraph: {
       title: `UX診断結果: ${new URL(analysis.url).hostname} — 平均スコア ${avgScore}/5`,
       description: analysis.summary?.slice(0, 120),
+      images: [{ url: `/api/og?${ogParams.toString()}`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `UX診断結果: ${new URL(analysis.url).hostname} — 平均スコア ${avgScore}/5`,
+      images: [`/api/og?${ogParams.toString()}`],
     },
   };
 }
