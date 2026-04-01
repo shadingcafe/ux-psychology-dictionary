@@ -1,6 +1,3 @@
-import { chromium as playwrightChromium } from "playwright-core";
-import chromium from "@sparticuz/chromium";
-
 export interface CrawlResult {
   screenshot: Buffer;
   title: string;
@@ -15,87 +12,108 @@ export interface CrawlResult {
   };
 }
 
+/**
+ * Fetch page metadata via server-side HTML fetch + screenshot via thum.io
+ * This approach works on Vercel Serverless without Playwright/Chromium
+ */
 export async function crawlPage(url: string): Promise<CrawlResult> {
-  // In production (Vercel), use @sparticuz/chromium
-  // In development, use local Chrome/Chromium
-  const isProduction = process.env.NODE_ENV === "production";
+  // Step 1: Fetch screenshot from thum.io (free, no API key needed)
+  const screenshotUrl = `https://image.thum.io/get/width/1280/crop/800/noanimate/${encodeURIComponent(url)}`;
+  const screenshotRes = await fetch(screenshotUrl, { signal: AbortSignal.timeout(20000) });
 
-  const browser = await playwrightChromium.launch({
-    args: isProduction ? chromium.args : [],
-    executablePath: isProduction
-      ? await chromium.executablePath()
-      : undefined, // Let playwright-core find local browser in dev
-    headless: true,
-  });
+  let screenshot: Buffer;
+  if (screenshotRes.ok) {
+    const arrayBuffer = await screenshotRes.arrayBuffer();
+    screenshot = Buffer.from(arrayBuffer);
+  } else {
+    // Return 1x1 transparent PNG as fallback
+    screenshot = Buffer.from(
+      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+      "base64"
+    );
+  }
+
+  // Step 2: Fetch HTML and extract metadata
+  let title = "";
+  let description = "";
+  const domSummary = {
+    navItems: [] as string[],
+    ctaButtons: [] as string[],
+    headings: [] as string[],
+    formFields: 0,
+    imageCount: 0,
+    linkCount: 0,
+  };
 
   try {
-    const context = await browser.newContext({
-      viewport: { width: 1280, height: 800 },
-      userAgent:
-        "UX-Psychology-Analyzer/1.0 (Educational Tool; +https://ux-psychology-dictionary.vercel.app)",
+    const htmlRes = await fetch(url, {
+      headers: {
+        "User-Agent": "UX-Psychology-Analyzer/1.0 (Educational Tool)",
+        Accept: "text/html",
+      },
+      signal: AbortSignal.timeout(10000),
     });
 
-    const page = await context.newPage();
-    await page.goto(url, { waitUntil: "networkidle", timeout: 30000 });
+    if (htmlRes.ok) {
+      const html = await htmlRes.text();
 
-    // Wait a bit for any lazy-loaded content
-    await page.waitForTimeout(2000);
+      // Extract title
+      const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+      title = titleMatch ? titleMatch[1].trim().replace(/\s+/g, " ") : "";
 
-    // Take screenshot
-    const screenshot = await page.screenshot({
-      fullPage: false,
-      type: "png",
-    });
+      // Extract meta description
+      const descMatch = html.match(
+        /<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i
+      ) || html.match(
+        /<meta[^>]+content=["']([^"']*)["'][^>]+name=["']description["']/i
+      );
+      description = descMatch ? descMatch[1].trim() : "";
 
-    // Extract metadata
-    const title = await page.title();
-    const description = await page
-      .$eval('meta[name="description"]', (el) =>
-        el.getAttribute("content")
-      )
-      .catch(() => "");
+      // Extract headings (h1, h2, h3)
+      const headingMatches = html.matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/gi);
+      for (const m of headingMatches) {
+        const text = m[1].replace(/<[^>]+>/g, "").trim().replace(/\s+/g, " ");
+        if (text && domSummary.headings.length < 15) {
+          domSummary.headings.push(text);
+        }
+      }
 
-    // Extract DOM summary
-    const domSummary = await page.evaluate(() => {
-      const navItems = Array.from(
-        document.querySelectorAll("nav a, header a, [role='navigation'] a")
-      )
-        .map((el) => el.textContent?.trim() || "")
-        .filter(Boolean)
-        .slice(0, 20);
+      // Extract nav links
+      const navSection = html.match(/<nav[^>]*>([\s\S]*?)<\/nav>/gi);
+      if (navSection) {
+        for (const nav of navSection) {
+          const linkMatches = nav.matchAll(/<a[^>]*>([\s\S]*?)<\/a>/gi);
+          for (const lm of linkMatches) {
+            const text = lm[1].replace(/<[^>]+>/g, "").trim().replace(/\s+/g, " ");
+            if (text && domSummary.navItems.length < 20) {
+              domSummary.navItems.push(text);
+            }
+          }
+        }
+      }
 
-      const ctaButtons = Array.from(
-        document.querySelectorAll(
-          'button, a[class*="btn"], a[class*="button"], [role="button"]'
-        )
-      )
-        .map((el) => el.textContent?.trim() || "")
-        .filter(Boolean)
-        .slice(0, 15);
+      // Extract buttons
+      const buttonMatches = html.matchAll(/<button[^>]*>([\s\S]*?)<\/button>/gi);
+      for (const m of buttonMatches) {
+        const text = m[1].replace(/<[^>]+>/g, "").trim().replace(/\s+/g, " ");
+        if (text && domSummary.ctaButtons.length < 15) {
+          domSummary.ctaButtons.push(text);
+        }
+      }
 
-      const headings = Array.from(
-        document.querySelectorAll("h1, h2, h3")
-      )
-        .map((el) => el.textContent?.trim() || "")
-        .filter(Boolean)
-        .slice(0, 15);
-
-      const formFields = document.querySelectorAll(
-        "input, textarea, select"
-      ).length;
-      const imageCount = document.querySelectorAll("img").length;
-      const linkCount = document.querySelectorAll("a").length;
-
-      return { navItems, ctaButtons, headings, formFields, imageCount, linkCount };
-    });
-
-    return {
-      screenshot: Buffer.from(screenshot),
-      title,
-      description: description || "",
-      domSummary,
-    };
-  } finally {
-    await browser.close();
+      // Count elements
+      domSummary.formFields = (html.match(/<(input|textarea|select)/gi) || []).length;
+      domSummary.imageCount = (html.match(/<img/gi) || []).length;
+      domSummary.linkCount = (html.match(/<a\s/gi) || []).length;
+    }
+  } catch {
+    // HTML fetch failed — continue with screenshot only
   }
+
+  return {
+    screenshot,
+    title,
+    description,
+    domSummary,
+  };
 }
