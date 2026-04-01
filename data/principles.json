@@ -1,0 +1,4137 @@
+[
+  {
+    "id": "hicks-law",
+    "name": {
+      "ja": "ヒックの法則",
+      "en": "Hick's Law"
+    },
+    "aliases": [
+      "ヒック・ハイマンの法則"
+    ],
+    "category": "cognitive-load",
+    "tags": [
+      "認知負荷",
+      "意思決定",
+      "ナビゲーション"
+    ],
+    "summary": "選択肢が増えると意思決定にかかる時間が対数的に増加する",
+    "description": "1952年にウィリアム・エドモンド・ヒックとレイ・ハイマンが提唱した法則で、選択肢の数と意思決定時間の関係を示します。選択肢がN個ある場合、反応時間はlog2(N+1)に比例して増加します。これは脳が情報を逐次的に処理し、各選択肢を評価するためです。UIデザインでは、ナビゲーションのメニュー項目数を制限する、段階的な情報開示（プログレッシブ・ディスクロージャー）を活用する、などの形で応用されます。ただし、ユーザーが選択肢に精通している場合や、選択肢が明確にカテゴリ分けされている場合は影響が緩和されます。",
+    "origin": {
+      "researcher": "William Edmund Hick & Ray Hyman",
+      "year": 1952,
+      "paper": "On the rate of gain of information"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Spotifyのジャンル選択",
+        "description": "初回セットアップ時に好みのジャンルを大カテゴリから段階的に絞り込ませる設計。一度に全ジャンルを見せない。"
+      },
+      {
+        "type": "bad",
+        "title": "多すぎるドロップダウン",
+        "description": "国選択で200カ国以上を一度にリスト表示。検索やグルーピングなしでは選択に時間がかかる。"
+      }
+    ],
+    "aiPromptTip": "ヒックの法則を意識して、メインナビゲーションの項目を5〜7個以内に絞り、それ以外はサブメニューに格納してください",
+    "detectionHints": [
+      "メニュー項目数",
+      "選択肢の数",
+      "ドロップダウン",
+      "ナビゲーション構造",
+      "段階的開示"
+    ],
+    "relatedPrinciples": [
+      "millers-law",
+      "cognitive-load",
+      "choice-overload",
+      "teslers-law"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/hicks-law/",
+      "nnGroup": [
+        {
+          "title": "Hick's Law: Designing Long Menu Lists",
+          "url": "https://www.nngroup.com/videos/hicks-law-long-menus/",
+          "type": "video"
+        },
+        {
+          "title": "Minimize Cognitive Load to Maximize Usability",
+          "url": "https://www.nngroup.com/articles/minimize-cognitive-load/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Hick, W.E.",
+          "year": 1952,
+          "title": "On the rate of gain of information",
+          "journal": "Quarterly Journal of Experimental Psychology"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "UI/UX改善とは？チェックリスト付",
+          "url": "https://goodpatch.com/blog/ui-ux-improvement"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jakobs-law",
+    "name": {
+      "ja": "ヤコブの法則",
+      "en": "Jakob's Law"
+    },
+    "aliases": [
+      "ジェイコブの法則"
+    ],
+    "category": "ux-laws",
+    "tags": [
+      "メンタルモデル",
+      "慣習",
+      "ユーザビリティ"
+    ],
+    "summary": "ユーザーは他のサイトで培った経験に基づいてあなたのサイトの動作を予測する",
+    "description": "ユーザビリティの第一人者ヤコブ・ニールセンが提唱したこの法則は、ユーザーがWebサイトやアプリをどう使うかの期待値が、過去に利用した他のサービスの経験によって形成されることを示しています。つまり、ユーザーは大半の時間を「あなたのサイト以外」で過ごしているため、広く普及したUIパターン（ハンバーガーメニュー、カートアイコン、検索バーの位置など）からの逸脱は混乱を招きます。革新的なデザインを追求する際も、既存のメンタルモデルを尊重することが重要です。",
+    "origin": {
+      "researcher": "Jakob Nielsen",
+      "year": 2000
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "ECサイトのカートアイコン",
+        "description": "画面右上にカートアイコンを配置。Amazonや楽天と同じ位置で、ユーザーが迷わない。"
+      },
+      {
+        "type": "bad",
+        "title": "独自のナビゲーションパターン",
+        "description": "左下にハンバーガーメニューを配置し、スクロール方向を横にするなど、慣習から大きく逸脱したUI。"
+      }
+    ],
+    "aiPromptTip": "ヤコブの法則を意識して、一般的なWebサイトのUIパターンに従ったレイアウトにしてください。独自パターンは避けてください",
+    "detectionHints": [
+      "標準的なレイアウト",
+      "慣習的な配置",
+      "ナビゲーション位置",
+      "一般的なUIパターン"
+    ],
+    "relatedPrinciples": [
+      "mental-model",
+      "fitts-law",
+      "aesthetic-usability"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/jakobs-law/",
+      "nnGroup": [
+        {
+          "title": "Jakob's Law of Internet User Experience",
+          "url": "https://www.nngroup.com/videos/jakobs-law-internet-ux/",
+          "type": "video"
+        },
+        {
+          "title": "10 Usability Heuristics for User Interface Design",
+          "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [
+        {
+          "title": "ユーザビリティの定義",
+          "url": "https://www.hcdnet.org/hcd/column/column_01/09.html"
+        }
+      ],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "「ユーザビリティの原則」まずは身の回りから意識しよう！",
+          "url": "https://goodpatch.com/blog/usability"
+        },
+        {
+          "title": "ヒューリスティック評価の手法とポイント",
+          "url": "https://goodpatch.com/blog/huristic-method"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fitts-law",
+    "name": {
+      "ja": "フィッツの法則",
+      "en": "Fitts's Law"
+    },
+    "aliases": [],
+    "category": "ux-laws",
+    "tags": [
+      "モーター制御",
+      "ターゲットサイズ",
+      "インタラクション"
+    ],
+    "summary": "ターゲットまでの距離が近く、サイズが大きいほど素早くポインティングできる",
+    "description": "1954年にポール・フィッツが発表したこの法則は、ターゲットを指し示す動作（ポインティング）にかかる時間が、ターゲットまでの距離とサイズに依存することを数学的にモデル化しています。具体的には、移動時間 = a + b × log2(2D/W) で表されます（D=距離、W=ターゲット幅）。UIデザインでは、重要なボタンを大きくする、頻繁に使う操作を画面端（無限の幅を持つターゲット）に配置する、関連する操作をグループ化して距離を縮める、などに応用されます。",
+    "origin": {
+      "researcher": "Paul Fitts",
+      "year": 1954,
+      "paper": "The information capacity of the human motor system in controlling the amplitude of movement"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "iOSのスライドしてロック解除",
+        "description": "大きなスライド領域で操作しやすく、画面端を活用した設計。"
+      },
+      {
+        "type": "bad",
+        "title": "小さすぎるモバイルボタン",
+        "description": "タップ領域が20px未満の小さなリンクテキスト。指で正確にタップするのが困難。"
+      }
+    ],
+    "aiPromptTip": "フィッツの法則を意識して、主要なCTAボタンは最低44×44pxのタッチターゲットを確保し、関連するアクションは近接して配置してください",
+    "detectionHints": [
+      "ボタンサイズ",
+      "タッチターゲット",
+      "クリック領域",
+      "操作距離",
+      "画面端の活用"
+    ],
+    "relatedPrinciples": [
+      "jakobs-law",
+      "doherty-threshold",
+      "teslers-law"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/fittss-law/",
+      "nnGroup": [
+        {
+          "title": "Fitts's Law and Its Applications in UX",
+          "url": "https://www.nngroup.com/articles/fitts-law/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [
+        {
+          "title": "「UXデザインの法則」発刊記念 — UXデザインと心理学",
+          "url": "https://www.hcdnet.org/hcd/event/entry-1672.html"
+        }
+      ],
+      "academicPapers": [
+        {
+          "authors": "Fitts, P.M.",
+          "year": 1954,
+          "title": "The information capacity of the human motor system",
+          "journal": "Journal of Experimental Psychology"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "【イカしたUIを見る】Vol.5",
+          "url": "https://goodpatch.com/blog/2025-10-good-ui-5"
+        }
+      ]
+    }
+  },
+  {
+    "id": "millers-law",
+    "name": {
+      "ja": "ミラーの法則",
+      "en": "Miller's Law"
+    },
+    "aliases": [
+      "マジカルナンバー7±2"
+    ],
+    "category": "cognitive-load",
+    "tags": [
+      "認知負荷",
+      "短期記憶",
+      "チャンキング"
+    ],
+    "summary": "人間の短期記憶は一度に7±2個の情報チャンクを保持できる",
+    "description": "1956年にジョージ・ミラーが発表した論文「マジカルナンバー7±2」に基づく法則です。人間のワーキングメモリ（短期記憶）は、一度に処理できる情報の塊（チャンク）が約7個前後に限られます。ただし、ミラー自身が後に述べたように、この数字は厳密な制限ではなく、情報のチャンキング（意味のあるまとまりに整理すること）によって実質的な容量は拡張できます。UIデザインでは、関連情報をグループ化する、長いリストをセクション分けする、電話番号をハイフンで区切る、などの形で応用されます。",
+    "origin": {
+      "researcher": "George A. Miller",
+      "year": 1956,
+      "paper": "The Magical Number Seven, Plus or Minus Two"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "電話番号のフォーマット",
+        "description": "090-1234-5678のようにハイフンで区切ることで、11桁の数字を3つのチャンクとして記憶しやすくする。"
+      },
+      {
+        "type": "bad",
+        "title": "区切りのない長い数列",
+        "description": "クレジットカード番号を16桁連続で表示。チャンキングなしでは記憶・確認が困難。"
+      }
+    ],
+    "aiPromptTip": "ミラーの法則を意識して、情報を5〜9個のグループに分け、関連する要素をチャンクとしてまとめてください",
+    "detectionHints": [
+      "グループ化",
+      "チャンク",
+      "セクション分け",
+      "情報の整理",
+      "リストの長さ"
+    ],
+    "relatedPrinciples": [
+      "hicks-law",
+      "chunking",
+      "working-memory",
+      "cognitive-load"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/millers-law/",
+      "nnGroup": [
+        {
+          "title": "Minimize Cognitive Load to Maximize Usability",
+          "url": "https://www.nngroup.com/articles/minimize-cognitive-load/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Miller, G.A.",
+          "year": 1956,
+          "title": "The Magical Number Seven, Plus or Minus Two",
+          "journal": "Psychological Review"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "aesthetic-usability",
+    "name": {
+      "ja": "美的ユーザビリティ効果",
+      "en": "Aesthetic-Usability Effect"
+    },
+    "aliases": [],
+    "category": "emotion",
+    "tags": [
+      "美的判断",
+      "ユーザビリティ",
+      "第一印象"
+    ],
+    "summary": "見た目が美しいデザインは、より使いやすいと感じられる",
+    "description": "1995年に黒須正明と柏村和弘がATMインターフェースの研究で発見した効果です。ユーザーは視覚的に魅力的なデザインを、実際の使いやすさに関わらず「より使いやすい」と知覚する傾向があります。美しいデザインはポジティブな感情反応を引き起こし、その結果として小さなユーザビリティの問題に対する寛容度が高まります。ただし、美しさだけでは根本的な使いにくさはカバーできません。見た目の良さと機能的なユーザビリティの両立が理想です。",
+    "origin": {
+      "researcher": "Masaaki Kurosu & Kaori Kashimura",
+      "year": 1995,
+      "paper": "Apparent Usability vs. Inherent Usability"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Appleの製品ページ",
+        "description": "洗練されたビジュアルデザインにより、製品情報が明確に伝わり、購入体験全体がスムーズに感じられる。"
+      },
+      {
+        "type": "bad",
+        "title": "情報過多な官公庁サイト",
+        "description": "機能的には充実しているが、視覚的な整理がされておらず、ユーザーに「使いにくい」印象を与える。"
+      }
+    ],
+    "aiPromptTip": "美的ユーザビリティ効果を意識して、余白を十分に取り、タイポグラフィの階層を整え、視覚的に洗練されたデザインにしてください",
+    "detectionHints": [
+      "視覚的な洗練度",
+      "余白の使い方",
+      "タイポグラフィの一貫性",
+      "カラーパレット",
+      "画像品質"
+    ],
+    "relatedPrinciples": [
+      "emotional-design",
+      "halo-effect",
+      "cognitive-fluency"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/aesthetic-usability-effect/",
+      "nnGroup": [
+        {
+          "title": "The Aesthetic-Usability Effect",
+          "url": "https://www.nngroup.com/articles/aesthetic-usability-effect/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Kurosu, M., & Kashimura, K.",
+          "year": 1995,
+          "title": "Apparent Usability vs. Inherent Usability",
+          "journal": "CHI '95"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "【イカしたUIを見る】Vol.6 2025年ベストアプリ3選",
+          "url": "https://goodpatch.com/blog/2025-12-good-ui-6"
+        }
+      ]
+    }
+  },
+  {
+    "id": "social-proof",
+    "name": {
+      "ja": "社会的証明",
+      "en": "Social Proof"
+    },
+    "aliases": [
+      "バンドワゴン効果"
+    ],
+    "category": "social",
+    "tags": [
+      "社会心理",
+      "信頼性",
+      "コンバージョン"
+    ],
+    "summary": "人は不確かな状況で他者の行動を参考にして意思決定する",
+    "description": "ロバート・チャルディーニが著書『影響力の武器』で体系化した説得の原理の一つです。人間は社会的動物であり、自分の判断に確信が持てないとき、他の人々がどう行動しているかを手がかりにします。レビューの星評価、「○○人が購入」の表示、著名人の推薦、SNSのいいね数などがこの原理を活用したUI要素です。特に、自分と似た属性の人々の行動は強い影響力を持ちます。",
+    "origin": {
+      "researcher": "Robert B. Cialdini",
+      "year": 1984
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Amazonのレビューシステム",
+        "description": "星評価、レビュー数、「この商品を買った人はこんな商品も買っています」で社会的証明を多層的に提供。"
+      },
+      {
+        "type": "bad",
+        "title": "偽のカウントダウン",
+        "description": "「あと3人が閲覧中」「残り2個」を常に表示する虚偽の希少性演出。信頼を損なうダークパターン。"
+      }
+    ],
+    "aiPromptTip": "社会的証明を活用して、ユーザーレビュー、利用者数、メディア掲載実績などの信頼性指標をファーストビューに配置してください",
+    "detectionHints": [
+      "レビュー表示",
+      "評価数",
+      "利用者数",
+      "推薦文",
+      "メディアロゴ",
+      "SNSカウント"
+    ],
+    "relatedPrinciples": [
+      "bandwagon-effect",
+      "authority-bias",
+      "scarcity"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "Social Proof in the User Experience",
+          "url": "https://www.nngroup.com/articles/social-proof-ux/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Influence: The Psychology of Persuasion",
+          "author": "Robert B. Cialdini"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "peak-end-rule",
+    "name": {
+      "ja": "ピーク・エンドの法則",
+      "en": "Peak-End Rule"
+    },
+    "aliases": [],
+    "category": "memory",
+    "tags": [
+      "記憶",
+      "体験設計",
+      "感情"
+    ],
+    "summary": "体験の記憶はピーク時（最も強い感情）と終了時の印象で決まる",
+    "description": "ダニエル・カーネマンらが1993年に実証した法則で、人間は体験全体の平均ではなく、最も感情的に強烈だった瞬間（ピーク）と、体験の終わり方（エンド）を重視して全体の印象を形成します。例えば、長く退屈な手続きでも最後にサプライズな完了画面があれば好印象が残ります。逆に、それまで快適でもエラーで終わると悪印象に。UXデザインでは、オンボーディングの最後に達成感を演出する、エラー復帰を丁寧にデザインする、などが重要です。",
+    "origin": {
+      "researcher": "Daniel Kahneman et al.",
+      "year": 1993,
+      "paper": "When More Pain Is Preferred to Less"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Duolingoの完了アニメーション",
+        "description": "レッスン完了時に派手な祝福アニメーションとXP獲得演出で強いポジティブな終了体験を作る。"
+      },
+      {
+        "type": "bad",
+        "title": "購入後の無機質な確認画面",
+        "description": "購入完了後に「注文を受け付けました」とだけ表示。感情的なピークを逃している。"
+      }
+    ],
+    "aiPromptTip": "ピーク・エンドの法則を意識して、フローの完了画面に達成感のあるアニメーションやメッセージを追加してください",
+    "detectionHints": [
+      "完了画面",
+      "サクセスメッセージ",
+      "達成感の演出",
+      "体験の終了ポイント",
+      "感情的ピーク"
+    ],
+    "relatedPrinciples": [
+      "emotional-design",
+      "zeigarnik-effect",
+      "serial-position-effect"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/peak-end-rule/",
+      "nnGroup": [
+        {
+          "title": "The Peak–End Rule: How Impressions Become Memories",
+          "url": "https://www.nngroup.com/articles/peak-end-rule/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Kahneman, D., et al.",
+          "year": 1993,
+          "title": "When More Pain Is Preferred to Less",
+          "journal": "Psychological Science"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "マイクロインタラクション入門",
+          "url": "https://goodpatch.com/blog/ui-micro-interaction"
+        }
+      ]
+    }
+  },
+  {
+    "id": "anchoring-effect",
+    "name": {
+      "ja": "アンカリング効果",
+      "en": "Anchoring Effect"
+    },
+    "aliases": [
+      "係留効果"
+    ],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "価格設計",
+      "意思決定"
+    ],
+    "summary": "最初に提示された情報（アンカー）がその後の判断に強い影響を与える",
+    "description": "トヴァスキーとカーネマンが1974年に報告した認知バイアスです。人は判断を行う際、最初に接した情報を基準点（アンカー）として、そこからの調整で最終判断を下します。しかし、この調整は不十分なことが多く、アンカーに引きずられた判断になりがちです。価格表示で「通常価格→セール価格」を並べるのはこの効果の典型的な活用例です。完全に無関係な数字でもアンカーとして機能することが実験で示されています。",
+    "origin": {
+      "researcher": "Amos Tversky & Daniel Kahneman",
+      "year": 1974,
+      "paper": "Judgment under Uncertainty: Heuristics and Biases"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "SaaSの料金プラン表示",
+        "description": "最も高い「エンタープライズプラン」を左に配置し、中間プランを「おすすめ」として強調。高いプランがアンカーになり中間が割安に見える。"
+      },
+      {
+        "type": "bad",
+        "title": "根拠のない値引き表示",
+        "description": "実態のない「定価」を高く設定し、常に「80%OFF」と表示。消費者庁ガイドラインに抵触する可能性。"
+      }
+    ],
+    "aiPromptTip": "アンカリング効果を活用して、料金プランを3つ並べ、推奨プランが割安に見えるような価格構成にしてください",
+    "detectionHints": [
+      "価格比較",
+      "値引き表示",
+      "プラン並び",
+      "数値の比較基準",
+      "元価格との対比"
+    ],
+    "relatedPrinciples": [
+      "framing-effect",
+      "decoy-effect",
+      "loss-aversion"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "The Anchoring Principle",
+          "url": "https://www.nngroup.com/articles/anchoring-principle/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Tversky, A., & Kahneman, D.",
+          "year": 1974,
+          "title": "Judgment under Uncertainty: Heuristics and Biases",
+          "journal": "Science"
+        }
+      ],
+      "books": [
+        {
+          "title": "ファスト&スロー",
+          "author": "Daniel Kahneman"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-proximity",
+    "name": {
+      "ja": "近接の法則",
+      "en": "Law of Proximity"
+    },
+    "aliases": [
+      "ゲシュタルトの近接の法則"
+    ],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "レイアウト",
+      "グルーピング"
+    ],
+    "summary": "空間的に近い要素は関連のあるグループとして知覚される",
+    "description": "ゲシュタルト心理学の基本原則の一つで、空間的に近くに配置された要素は、自動的にグループとして知覚されます。これは視覚情報を効率的に処理するための脳の仕組みで、意識的な努力なしに働きます。UIデザインでは、関連するフォーム項目を近くに配置する、無関連な要素には十分なスペースを設ける、ラベルを対応する入力フィールドの近くに置く、などの形で活用されます。この原則に反するレイアウトは、ユーザーの情報理解を妨げます。",
+    "origin": {
+      "researcher": "Max Wertheimer",
+      "year": 1923
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "フォームのグルーピング",
+        "description": "「個人情報」「連絡先」「支払い情報」をセクションごとにまとめ、セクション間に余白を設けたフォーム。"
+      },
+      {
+        "type": "bad",
+        "title": "等間隔のフォーム項目",
+        "description": "全フォーム項目が同じ間隔で配置され、どの項目がどのグループに属するか分かりにくい。"
+      }
+    ],
+    "aiPromptTip": "近接の法則を意識して、関連する要素は余白を狭く、無関連な要素は余白を広くとってグループ化を明確にしてください",
+    "detectionHints": [
+      "要素間の余白",
+      "グルーピング",
+      "セクション分け",
+      "ラベルと入力の距離",
+      "関連要素の近接配置"
+    ],
+    "relatedPrinciples": [
+      "law-of-similarity",
+      "law-of-common-region",
+      "law-of-uniform-connectedness"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/law-of-proximity/",
+      "nnGroup": [
+        {
+          "title": "Gestalt Principles for UX Designers",
+          "url": "https://www.nngroup.com/articles/gestalt-proximity/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "cognitive-load",
+    "name": {
+      "ja": "認知負荷理論",
+      "en": "Cognitive Load Theory"
+    },
+    "aliases": [],
+    "category": "cognitive-load",
+    "tags": [
+      "認知負荷",
+      "情報設計",
+      "学習"
+    ],
+    "summary": "人間の認知処理能力には限界があり、過度な負荷は理解と意思決定を阻害する",
+    "description": "1988年にジョン・スウェラーが教育心理学の文脈で提唱した理論です。認知負荷には3種類あります。内在的負荷（タスク固有の複雑さ）、外在的負荷（不適切な情報提示による余計な負荷）、関連的負荷（学習や理解に必要な有益な負荷）。UIデザインの目標は、外在的負荷を最小化し、関連的負荷に認知リソースを集中させることです。具体的には、不要な装飾を排除する、情報を段階的に開示する、一貫性のあるデザインパターンを使う、などが有効です。",
+    "origin": {
+      "researcher": "John Sweller",
+      "year": 1988,
+      "paper": "Cognitive Load During Problem Solving"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Googleのホームページ",
+        "description": "検索バー1つに集約されたミニマルなUI。認知リソースを検索タスクに集中させている。"
+      },
+      {
+        "type": "bad",
+        "title": "情報過多なダッシュボード",
+        "description": "20以上のウィジェットが同時表示されるダッシュボード。優先度の判断に認知リソースが消費される。"
+      }
+    ],
+    "aiPromptTip": "認知負荷理論を意識して、1画面の情報量を必要最小限に抑え、プログレッシブ・ディスクロージャーで段階的に情報を提示してください",
+    "detectionHints": [
+      "情報量",
+      "ミニマルデザイン",
+      "段階的開示",
+      "視覚的ノイズ",
+      "装飾の多さ"
+    ],
+    "relatedPrinciples": [
+      "millers-law",
+      "hicks-law",
+      "occams-razor",
+      "teslers-law"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/cognitive-load/",
+      "nnGroup": [
+        {
+          "title": "Minimize Cognitive Load to Maximize Usability",
+          "url": "https://www.nngroup.com/articles/minimize-cognitive-load/",
+          "type": "article"
+        },
+        {
+          "title": "4 Principles to Reduce Cognitive Load in Forms",
+          "url": "https://www.nngroup.com/articles/4-principles-reduce-cognitive-load/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [
+        {
+          "title": "UIデザインの根底がわかる認知心理学入門",
+          "url": "https://www.hcdnet.org/hcd/event/entry-1228.html"
+        }
+      ],
+      "academicPapers": [
+        {
+          "authors": "Sweller, J.",
+          "year": 1988,
+          "title": "Cognitive Load During Problem Solving",
+          "journal": "Cognitive Science"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "UI/UX改善とは？チェックリスト付",
+          "url": "https://goodpatch.com/blog/ui-ux-improvement"
+        }
+      ]
+    }
+  },
+  {
+    "id": "teslers-law",
+    "name": {
+      "ja": "テスラーの法則",
+      "en": "Tesler's Law"
+    },
+    "aliases": [
+      "複雑性保存の法則"
+    ],
+    "category": "cognitive-load",
+    "tags": [
+      "認知負荷",
+      "複雑性",
+      "システム設計"
+    ],
+    "summary": "どんなシステムにも削減できない一定量の複雑さがある",
+    "description": "1980年代にラリー・テスラーが提唱した法則で、あらゆるシステムにはそれ以上単純化できない固有の複雑さが存在するとされます。重要なのは、その複雑さをユーザーとシステムのどちらが負担するかという設計判断です。優れたUIは、複雑さをシステム側で吸収し、ユーザーには最小限の操作だけを求めます。例えばオートコンプリート、スマートデフォルト、自動フォーマットなどがこの原則の実践例です。",
+    "origin": {
+      "researcher": "Larry Tesler",
+      "year": 1984
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Googleマップの経路検索",
+        "description": "複雑な経路計算をシステム側で処理し、ユーザーは出発地と目的地を入力するだけで最適ルートが得られる。"
+      },
+      {
+        "type": "bad",
+        "title": "複雑な日付入力フォーム",
+        "description": "年・月・日を別々のドロップダウンで選ばせるフォーム。カレンダーピッカーならワンクリックで済む。"
+      }
+    ],
+    "aiPromptTip": "テスラーの法則を意識して、複雑な設定はシステム側でデフォルトを提供し、ユーザーの操作を最小限にしてください",
+    "detectionHints": [
+      "オートコンプリート",
+      "デフォルト値",
+      "スマートデフォルト",
+      "自動入力"
+    ],
+    "relatedPrinciples": [
+      "cognitive-load",
+      "hicks-law",
+      "occams-razor"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/teslers-law/",
+      "nnGroup": [
+        {
+          "title": "Tesler's Law",
+          "url": "https://www.nngroup.com/articles/teslers-law/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Designing for Interaction",
+          "author": "Dan Saffer"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "chunking",
+    "name": {
+      "ja": "チャンキング",
+      "en": "Chunking"
+    },
+    "aliases": [],
+    "category": "cognitive-load",
+    "tags": [
+      "認知負荷",
+      "情報整理",
+      "グルーピング"
+    ],
+    "summary": "情報を意味のあるまとまりに分割すると記憶・理解しやすくなる",
+    "description": "ミラーの法則から派生した概念で、情報を小さな意味のある塊（チャンク）に分割することで、ワーキングメモリの負荷を軽減し、理解と記憶を促進します。電話番号をハイフンで区切る、長いフォームをセクションに分ける、カード型レイアウトで情報を区切るなどが典型的な適用例です。チャンキングの効果は、脳が個々の要素ではなく意味のまとまりとして情報を処理するためです。",
+    "origin": {
+      "researcher": "George A. Miller",
+      "year": 1956
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "クレジットカード番号入力",
+        "description": "16桁を4桁ずつスペースで区切って表示。入力ミスの確認も容易になる。"
+      },
+      {
+        "type": "bad",
+        "title": "延々と続く設定画面",
+        "description": "50以上の設定項目がカテゴリ分けなしに一覧表示。探したい設定が見つからない。"
+      }
+    ],
+    "aiPromptTip": "チャンキングを活用して、長い入力フォームを3〜4項目ごとのセクションに分けてください",
+    "detectionHints": [
+      "情報のグルーピング",
+      "セクション区切り",
+      "カード型表示",
+      "番号の区切り"
+    ],
+    "relatedPrinciples": [
+      "millers-law",
+      "cognitive-load",
+      "law-of-proximity"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/chunking/",
+      "nnGroup": [
+        {
+          "title": "Minimize Cognitive Load to Maximize Usability",
+          "url": "https://www.nngroup.com/articles/minimize-cognitive-load/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "occams-razor",
+    "name": {
+      "ja": "オッカムの剃刀",
+      "en": "Occam's Razor"
+    },
+    "aliases": [],
+    "category": "cognitive-load",
+    "tags": [
+      "シンプルさ",
+      "ミニマリズム",
+      "設計原則"
+    ],
+    "summary": "同等の効果なら最もシンプルな解決策を選ぶべき",
+    "description": "14世紀の哲学者ウィリアム・オッカムに由来する思考原則で、複数の仮説がある場合、最もシンプルなものを選ぶべきという考え方です。UIデザインにおいては、不要な装飾・機能・ステップを削ぎ落とし、ユーザーの目的達成に本当に必要な要素だけを残すことを意味します。ただし「シンプル」は「機能が少ない」ではなく「理解しやすい」という意味です。",
+    "origin": {
+      "researcher": "William of Ockham",
+      "year": 1323
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Googleの検索ページ",
+        "description": "検索バーと2つのボタンだけの究極的にシンプルなUI。検索という1つの目的に集中。"
+      },
+      {
+        "type": "bad",
+        "title": "機能過多なツールバー",
+        "description": "100以上のアイコンが並ぶツールバー。頻繁に使う機能が埋もれてしまう。"
+      }
+    ],
+    "aiPromptTip": "オッカムの剃刀を意識して、不要な要素を排除した最小限のUIにしてください",
+    "detectionHints": [
+      "UI要素の数",
+      "視覚的シンプルさ",
+      "機能の絞り込み"
+    ],
+    "relatedPrinciples": [
+      "cognitive-load",
+      "teslers-law",
+      "hicks-law"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/occams-razor/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "working-memory",
+    "name": {
+      "ja": "ワーキングメモリ",
+      "en": "Working Memory"
+    },
+    "aliases": [
+      "作業記憶"
+    ],
+    "category": "cognitive-load",
+    "tags": [
+      "認知負荷",
+      "短期記憶",
+      "情報保持"
+    ],
+    "summary": "タスク遂行に必要な情報を一時的に保持・操作する認知システム",
+    "description": "ワーキングメモリは、情報を一時的に保持しながら同時に処理する認知システムです。短期記憶と異なり、単なる保持だけでなく情報の操作も行います。UIデザインでは、ユーザーが前のページの情報を覚えている前提でデザインしない、重要な情報を常時表示する、コンテキストを維持するなどが重要です。ワーキングメモリへの過度な依存は認知負荷を増大させます。",
+    "origin": {
+      "researcher": "Alan Baddeley & Graham Hitch",
+      "year": 1974
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "UNIQLOセルフレジの金額常時表示",
+        "description": "スキャンした商品の合計金額を常に画面上部に表示。ユーザーが記憶に頼らなくて済む。"
+      },
+      {
+        "type": "bad",
+        "title": "前ページの情報が消えるウィザード",
+        "description": "複数ステップのフォームで、前のステップの入力内容が確認できない設計。"
+      }
+    ],
+    "aiPromptTip": "ワーキングメモリの負荷を減らすため、重要な情報は常時表示し、コンテキストを維持する設計にしてください",
+    "detectionHints": [
+      "重要情報の常時表示",
+      "コンテキスト維持",
+      "パンくずリスト"
+    ],
+    "relatedPrinciples": [
+      "millers-law",
+      "cognitive-load",
+      "chunking"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/working-memory/",
+      "nnGroup": [
+        {
+          "title": "Working Memory and External Memory",
+          "url": "https://www.nngroup.com/videos/working-memory-external-memory/",
+          "type": "video"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "【イカしたUIを見る】Vol.5",
+          "url": "https://goodpatch.com/blog/2025-10-good-ui-5"
+        }
+      ]
+    }
+  },
+  {
+    "id": "parkinsons-law",
+    "name": {
+      "ja": "パーキンソンの法則",
+      "en": "Parkinson's Law"
+    },
+    "aliases": [],
+    "category": "cognitive-load",
+    "tags": [
+      "時間管理",
+      "行動",
+      "制約"
+    ],
+    "summary": "作業は与えられた時間をすべて使い切るまで膨張する",
+    "description": "1957年にシリル・ノースコート・パーキンソンが提唱した法則で、タスクに割り当てられた時間が長いほど、そのタスクの完了に時間がかかるようになるという現象です。UIデザインでは、適切な締め切りやタイマーを設定する、段階的なタスク区切りを設ける、プログレスバーで残り時間を可視化するなどの形で応用されます。",
+    "origin": {
+      "researcher": "Cyril Northcote Parkinson",
+      "year": 1957
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "メルカリの出品期限",
+        "description": "値下げ交渉に期限を設けることで、ダラダラとした交渉を防ぎ意思決定を促進。"
+      },
+      {
+        "type": "bad",
+        "title": "期限のないアンケート",
+        "description": "回答期限が設定されていないフォーム。ユーザーが後回しにして結局回答しない。"
+      }
+    ],
+    "aiPromptTip": "パーキンソンの法則を意識して、タスクに適切な締め切りやタイマーを設定してください",
+    "detectionHints": [
+      "タイマー表示",
+      "期限設定",
+      "タスクの区切り"
+    ],
+    "relatedPrinciples": [
+      "cognitive-load",
+      "goal-gradient-effect",
+      "scarcity"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/parkinsons-law/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Parkinson's Law: The Pursuit of Progress",
+          "author": "C. Northcote Parkinson"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "framing-effect",
+    "name": {
+      "ja": "フレーミング効果",
+      "en": "Framing Effect"
+    },
+    "aliases": [],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "意思決定",
+      "コピーライティング"
+    ],
+    "summary": "同じ情報でも表現方法によって判断が変わる",
+    "description": "トヴァスキーとカーネマンが1981年に実証した認知バイアスです。客観的には同一の情報でも、提示の仕方（フレーム）によって人の判断や選好が変わります。例えば「手術の成功率95%」と「手術の失敗率5%」は同じ事実ですが、前者の方が好意的に受け取られます。UIデザインでは、メッセージの表現、統計の見せ方、エラーメッセージの書き方などに大きく影響します。",
+    "origin": {
+      "researcher": "Amos Tversky & Daniel Kahneman",
+      "year": 1981,
+      "paper": "The Framing of Decisions and the Psychology of Choice"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Spotifyの音質設定",
+        "description": "「高音質」「最高音質」というポジティブなラベルで選択肢を表現。"
+      },
+      {
+        "type": "bad",
+        "title": "ネガティブなエラーメッセージ",
+        "description": "「パスワードが間違っています」→「パスワードを確認してもう一度お試しください」の方が好印象。"
+      }
+    ],
+    "aiPromptTip": "フレーミング効果を意識して、ネガティブな表現をポジティブなフレーミングに変換してください",
+    "detectionHints": [
+      "統計の表現方法",
+      "ポジティブ/ネガティブ表現",
+      "メッセージのトーン"
+    ],
+    "relatedPrinciples": [
+      "anchoring-effect",
+      "loss-aversion",
+      "nudge"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Tversky, A., & Kahneman, D.",
+          "year": 1981,
+          "title": "The Framing of Decisions and the Psychology of Choice",
+          "journal": "Science"
+        }
+      ],
+      "books": [
+        {
+          "title": "ファスト&スロー",
+          "author": "Daniel Kahneman"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "default-effect",
+    "name": {
+      "ja": "デフォルト効果",
+      "en": "Default Effect"
+    },
+    "aliases": [],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "ナッジ",
+      "設定"
+    ],
+    "summary": "人は提示されたデフォルトの選択肢をそのまま受け入れやすい",
+    "description": "デフォルト効果は、人が提示された初期設定や推奨される選択肢をそのまま採用しやすい傾向を指します。これは意思決定の労力を避ける認知的怠惰、デフォルトが推奨と解釈される暗黙の社会的証明、そして現状維持バイアスが複合的に作用するためです。臓器提供のオプトイン/オプトアウト設計による登録率の劇的な差は、デフォルト効果の有名な実例です。",
+    "origin": {
+      "researcher": "Eric J. Johnson & Daniel Goldstein",
+      "year": 2003
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "iPhoneのプライバシー設定",
+        "description": "プライバシー保護が高いデフォルト設定。ユーザーの安全を優先した設計。"
+      },
+      {
+        "type": "bad",
+        "title": "メルマガ自動購読",
+        "description": "会員登録時にメルマガ購読チェックボックスが最初からON。ダークパターンの可能性。"
+      }
+    ],
+    "aiPromptTip": "デフォルト効果を活用して、ユーザーにとって最適な設定をデフォルトにし、変更したい人だけ操作する設計にしてください",
+    "detectionHints": [
+      "チェックボックスの初期状態",
+      "推奨プランのハイライト",
+      "デフォルト設定"
+    ],
+    "relatedPrinciples": [
+      "nudge",
+      "status-quo-bias",
+      "teslers-law"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Nudge",
+          "author": "Richard Thaler & Cass Sunstein"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "choice-overload",
+    "name": {
+      "ja": "選択のパラドックス",
+      "en": "Choice Overload"
+    },
+    "aliases": [
+      "選択の過負荷",
+      "ジャム実験"
+    ],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "意思決定",
+      "選択肢"
+    ],
+    "summary": "選択肢が多すぎると選べなくなったり満足度が下がる",
+    "description": "バリー・シュワルツが2004年に著書で一般化した概念で、アイエンガーとレッパーの有名な「ジャム実験」（2000年）でも実証されています。24種類のジャムを並べた場合より6種類の方が購入率が高かったという結果は、選択肢過多が意思決定を麻痺させることを示しています。UIデザインでは、選択肢を厳選する、フィルタ・ソート機能を提供する、おすすめを提示するなどの対策が有効です。",
+    "origin": {
+      "researcher": "Barry Schwartz",
+      "year": 2004
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Netflixの「あなたにおすすめ」",
+        "description": "膨大なコンテンツからアルゴリズムで厳選し、パーソナライズされた少数の選択肢を提示。"
+      },
+      {
+        "type": "bad",
+        "title": "フィルタなしの商品一覧",
+        "description": "1000件以上の商品をページネーションだけで表示。フィルタやソートが不十分。"
+      }
+    ],
+    "aiPromptTip": "選択のパラドックスを避けるため、選択肢は7つ以下に絞り、おすすめを明示してください",
+    "detectionHints": [
+      "選択肢の数",
+      "フィルタ機能の有無",
+      "おすすめ表示"
+    ],
+    "relatedPrinciples": [
+      "hicks-law",
+      "default-effect",
+      "cognitive-load"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/choice-overload/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Iyengar, S.S., & Lepper, M.R.",
+          "year": 2000,
+          "title": "When Choice is Demotivating",
+          "journal": "Journal of Personality and Social Psychology"
+        }
+      ],
+      "books": [
+        {
+          "title": "The Paradox of Choice",
+          "author": "Barry Schwartz"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "decoy-effect",
+    "name": {
+      "ja": "デコイ効果",
+      "en": "Decoy Effect"
+    },
+    "aliases": [
+      "おとり効果",
+      "非対称優位性効果"
+    ],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "価格設計",
+      "意思決定"
+    ],
+    "summary": "劣った第3の選択肢を加えることで特定の選択肢を魅力的に見せる",
+    "description": "1982年にフーバーらが発見した効果で、2つの選択肢の間で迷っている消費者に、片方に対してのみ劣位にある第3の選択肢（デコイ）を加えると、優位な方の選択肢がより魅力的に見えるようになります。料金プランの「松竹梅」3段構成はこの効果を活用した典型例で、中間プランの割安感を演出するために高額プランが設定されることがあります。",
+    "origin": {
+      "researcher": "Joel Huber, John Payne & Christopher Puto",
+      "year": 1982
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "SaaSの3段階料金プラン",
+        "description": "Basic/Pro/Enterpriseの3段構成で、Proプランが最もコスパが良く見える設計。"
+      },
+      {
+        "type": "bad",
+        "title": "不自然な価格設定",
+        "description": "明らかに選ばれることを想定していない不合理な価格のプランが混在。ユーザーに不信感を与える。"
+      }
+    ],
+    "aiPromptTip": "デコイ効果を活用して、3つの料金プランを設計し、中央のプランが最も魅力的に見えるようにしてください",
+    "detectionHints": [
+      "料金プランの3段構成",
+      "比較テーブル",
+      "おすすめプラン"
+    ],
+    "relatedPrinciples": [
+      "anchoring-effect",
+      "framing-effect",
+      "loss-aversion"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Huber, J., Payne, J.W., & Puto, C.",
+          "year": 1982,
+          "title": "Adding Asymmetrically Dominated Alternatives",
+          "journal": "Journal of Consumer Research"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "loss-aversion",
+    "name": {
+      "ja": "損失回避",
+      "en": "Loss Aversion"
+    },
+    "aliases": [
+      "プロスペクト理論"
+    ],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "行動経済学",
+      "意思決定"
+    ],
+    "summary": "人は同じ量の利得よりも損失を約2倍大きく感じる",
+    "description": "カーネマンとトヴァスキーが1979年に発表したプロスペクト理論の核心的概念です。人は利益を得る喜びよりも、同じ量を失う苦痛の方を約2倍強く感じます。UIデザインでは「今だけ」「残りわずか」「この特典を逃すと…」といった損失フレーミングが使われます。ただし過度な使用はダークパターンとなり、ユーザーの信頼を損なう点に注意が必要です。",
+    "origin": {
+      "researcher": "Daniel Kahneman & Amos Tversky",
+      "year": 1979,
+      "paper": "Prospect Theory: An Analysis of Decision under Risk"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Booking.comの残室表示",
+        "description": "「このホテルは残り2室」と表示し、機会損失の可能性を伝えて予約を促進。"
+      },
+      {
+        "type": "bad",
+        "title": "虚偽の限定表示",
+        "description": "常に「残り1個」と表示される商品ページ。ユーザーの信頼を損なうダークパターン。"
+      }
+    ],
+    "aiPromptTip": "損失回避の心理を活用して、ユーザーが見逃す可能性のある価値を適切に伝えてください",
+    "detectionHints": [
+      "限定表示",
+      "カウントダウン",
+      "在庫残数表示",
+      "期間限定"
+    ],
+    "relatedPrinciples": [
+      "scarcity",
+      "anchoring-effect",
+      "framing-effect"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "Scarcity Principle: Making Users Click RIGHT NOW",
+          "url": "https://www.nngroup.com/articles/scarcity-principle-ux/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Kahneman, D., & Tversky, A.",
+          "year": 1979,
+          "title": "Prospect Theory: An Analysis of Decision under Risk",
+          "journal": "Econometrica"
+        }
+      ],
+      "books": [
+        {
+          "title": "ファスト&スロー",
+          "author": "Daniel Kahneman"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "sunk-cost-effect",
+    "name": {
+      "ja": "サンクコスト効果",
+      "en": "Sunk Cost Effect"
+    },
+    "aliases": [
+      "埋没費用効果",
+      "コンコルド効果"
+    ],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "行動経済学",
+      "エンゲージメント"
+    ],
+    "summary": "既に投資した時間・労力を無駄にしたくなくて続けてしまう",
+    "description": "既に費やした回収不可能なコスト（サンクコスト）があると、合理的判断に反してその活動を続けてしまう心理的傾向です。ゲームでレベル上げに費やした時間、ポイントカードのスタンプ、プログレスバーの進捗などがUIでの活用例です。ユーザーのエンゲージメントを高める一方、ユーザーを不必要に縛り付ける倫理的問題もあります。",
+    "origin": {
+      "researcher": "Hal Arkes & Catherine Blumer",
+      "year": 1985
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "LinkedInのプロフィール完成度",
+        "description": "プロフィール完成度を表示し、既に入力した情報を無駄にしたくない心理で追加入力を促す。"
+      },
+      {
+        "type": "bad",
+        "title": "退会を困難にするサービス",
+        "description": "長期利用データを盾に退会を思いとどまらせるダークパターン。"
+      }
+    ],
+    "aiPromptTip": "サンクコスト効果を活用して、ユーザーの進捗を可視化し、継続利用のモチベーションを高めてください",
+    "detectionHints": [
+      "進捗表示",
+      "ストリーク表示",
+      "「あと少しで完了」メッセージ"
+    ],
+    "relatedPrinciples": [
+      "zeigarnik-effect",
+      "goal-gradient-effect",
+      "loss-aversion"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Arkes, H.R., & Blumer, C.",
+          "year": 1985,
+          "title": "The psychology of sunk cost",
+          "journal": "Organizational Behavior and Human Decision Processes"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "confirmation-bias",
+    "name": {
+      "ja": "確証バイアス",
+      "en": "Confirmation Bias"
+    },
+    "aliases": [],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "意思決定",
+      "情報処理"
+    ],
+    "summary": "自分の既存の信念を支持する情報を優先的に集め、反する情報を無視する",
+    "description": "1960年にピーター・ウェイソンが実証した認知バイアスで、人は自分が既に信じていることを裏付ける情報を積極的に探し、矛盾する情報を軽視する傾向があります。UXデザインでは、検索結果のフィルタバブル、パーソナライズされたフィードの偏り、ユーザーテスト時のリサーチャーのバイアスなどに影響します。バランスの取れた情報提示が重要です。",
+    "origin": {
+      "researcher": "Peter Cathcart Wason",
+      "year": 1960,
+      "paper": "On the failure to eliminate hypotheses in a conceptual task"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Amazonの比較機能",
+        "description": "商品比較テーブルで、メリットだけでなくスペックの違いを中立的に表示。"
+      },
+      {
+        "type": "bad",
+        "title": "偏った商品レビュー表示",
+        "description": "高評価レビューだけを目立たせ、低評価を折りたたむ設計。"
+      }
+    ],
+    "aiPromptTip": "確証バイアスに配慮して、ポジティブ・ネガティブ両方の情報をバランスよく提示してください",
+    "detectionHints": [
+      "情報の偏り",
+      "フィルタバブル",
+      "レビューの表示バランス"
+    ],
+    "relatedPrinciples": [
+      "framing-effect",
+      "false-consensus",
+      "availability-heuristic"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/cognitive-bias/",
+      "nnGroup": [
+        {
+          "title": "Confirmation Bias in UX Work",
+          "url": "https://www.nngroup.com/videos/confirmation-bias-ux-work/",
+          "type": "video"
+        },
+        {
+          "title": "Decision Frames: How Cognitive Biases Affect UX Practitioners",
+          "url": "https://www.nngroup.com/articles/decision-framing-cognitive-bias-ux-pros/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Wason, P.C.",
+          "year": 1960,
+          "title": "On the failure to eliminate hypotheses in a conceptual task",
+          "journal": "QJEP"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "status-quo-bias",
+    "name": {
+      "ja": "現状維持バイアス",
+      "en": "Status Quo Bias"
+    },
+    "aliases": [],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "行動経済学",
+      "変化抵抗"
+    ],
+    "summary": "人は変化を避け現状を維持する選択を好む傾向がある",
+    "description": "1988年にサミュエルソンとゼクハウザーが命名したバイアスで、変化に伴うリスクや不確実性を避けるため、現在の状態を維持しようとする傾向です。損失回避とデフォルト効果が複合的に作用しています。UIデザインでは、デフォルト設定の重要性、段階的な変更の導入、変更による利点の明確な提示などに関連します。",
+    "origin": {
+      "researcher": "William Samuelson & Richard Zeckhauser",
+      "year": 1988
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Slackのデザインリニューアル通知",
+        "description": "UIの大幅変更時に段階的に新デザインを導入し、旧UIへの切り替え期間を設ける。"
+      },
+      {
+        "type": "bad",
+        "title": "突然のUI全面変更",
+        "description": "予告なくUIを全面的に変更し、慣れたワークフローが使えなくなる。"
+      }
+    ],
+    "aiPromptTip": "現状維持バイアスに配慮して、UIの変更は段階的に導入し、ユーザーに変更のメリットを明確に伝えてください",
+    "detectionHints": [
+      "UIの変更通知",
+      "段階的導入",
+      "旧バージョンへの切替"
+    ],
+    "relatedPrinciples": [
+      "default-effect",
+      "loss-aversion",
+      "jakobs-law"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Samuelson, W., & Zeckhauser, R.",
+          "year": 1988,
+          "title": "Status quo bias in decision making",
+          "journal": "Journal of Risk and Uncertainty"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "endowment-effect",
+    "name": {
+      "ja": "保有効果",
+      "en": "Endowment Effect"
+    },
+    "aliases": [
+      "授かり効果"
+    ],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "行動経済学",
+      "所有"
+    ],
+    "summary": "自分が所有しているものに実際の価値以上の価値を感じる",
+    "description": "カーネマン、ネッチ、ターレーが1990年の実験で実証した効果で、人は自分が所有しているものを手放すことに対して、獲得する場合よりも高い金額を要求します。デジタルサービスでは、無料トライアル期間中に作成したデータやカスタマイズ設定が「自分のもの」と感じられ、解約への心理的障壁となります。",
+    "origin": {
+      "researcher": "Daniel Kahneman, Jack Knetsch & Richard Thaler",
+      "year": 1990,
+      "paper": "Experimental Tests of the Endowment Effect"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Canvaの無料プランで作成したデザイン",
+        "description": "無料プランで作成したデザインデータが蓄積され、有料プランへのアップグレード動機になる。"
+      },
+      {
+        "type": "bad",
+        "title": "データ人質戦略",
+        "description": "退会時にすべてのデータが消えると脅し、退会を困難にするサービス。"
+      }
+    ],
+    "aiPromptTip": "保有効果を活用して、無料トライアル中にユーザーが価値あるデータを作成できる設計にしてください",
+    "detectionHints": [
+      "無料トライアル",
+      "カスタマイズ機能",
+      "データの蓄積"
+    ],
+    "relatedPrinciples": [
+      "loss-aversion",
+      "sunk-cost-effect",
+      "ikea-effect"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "Endowment Effect in UX",
+          "url": "https://www.nngroup.com/videos/endowment-effect/",
+          "type": "video"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Kahneman, D., Knetsch, J.L., & Thaler, R.H.",
+          "year": 1990,
+          "title": "Experimental Tests of the Endowment Effect",
+          "journal": "JPE"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "availability-heuristic",
+    "name": {
+      "ja": "利用可能性ヒューリスティック",
+      "en": "Availability Heuristic"
+    },
+    "aliases": [],
+    "category": "decision-making",
+    "tags": [
+      "認知バイアス",
+      "意思決定",
+      "判断の偏り"
+    ],
+    "summary": "思い出しやすい情報ほど発生頻度が高いと判断してしまう",
+    "description": "トヴァスキーとカーネマンが1973年に提唱した認知バイアスで、ある出来事の発生確率を判断する際、記憶から思い出しやすい事例ほど頻度が高いと見積もる傾向です。メディアで大きく報じられた事故は実際より頻度が高く感じられます。UIデザインでは、最近の使用履歴の表示、よく使う機能のショートカット、検索候補の表示などに関連します。",
+    "origin": {
+      "researcher": "Amos Tversky & Daniel Kahneman",
+      "year": 1973
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Google検索のサジェスト",
+        "description": "最近の検索履歴やトレンドワードをサジェストし、思い出しやすい情報で検索を補助。"
+      },
+      {
+        "type": "bad",
+        "title": "恐怖を煽るセキュリティ警告",
+        "description": "過度に大きな警告表示で、実際のリスク以上にユーザーを不安にさせる。"
+      }
+    ],
+    "aiPromptTip": "利用可能性ヒューリスティックを活用して、最近使った機能やよく使う項目を優先的に表示してください",
+    "detectionHints": [
+      "最近の使用履歴",
+      "よく使う機能",
+      "検索サジェスト"
+    ],
+    "relatedPrinciples": [
+      "confirmation-bias",
+      "framing-effect",
+      "serial-position-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Tversky, A., & Kahneman, D.",
+          "year": 1973,
+          "title": "Availability: A Heuristic for Judging Frequency and Probability",
+          "journal": "Cognitive Psychology"
+        }
+      ],
+      "books": [
+        {
+          "title": "ファスト&スロー",
+          "author": "Daniel Kahneman"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-similarity",
+    "name": {
+      "ja": "類似の法則",
+      "en": "Law of Similarity"
+    },
+    "aliases": [
+      "ゲシュタルトの類似の法則"
+    ],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "視覚デザイン",
+      "パターン認識"
+    ],
+    "summary": "視覚的に類似した要素は同じグループとして知覚される",
+    "description": "ゲシュタルト心理学の基本原則の一つで、色、形、サイズ、テクスチャなどの視覚的特徴が似ている要素は、同じカテゴリや機能を持つものとして自動的にグループ化されます。UIデザインでは、同じ機能のボタンに同じスタイルを適用する、カテゴリごとに色分けする、一貫性のあるアイコンスタイルを使うなどに応用されます。",
+    "origin": {
+      "researcher": "Max Wertheimer",
+      "year": 1923
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Googleマテリアルデザインのボタン体系",
+        "description": "Filled/Outlined/Textの3種のボタンスタイルで機能の重要度を視覚的に区別。"
+      },
+      {
+        "type": "bad",
+        "title": "不統一なボタンスタイル",
+        "description": "同じページ内で同じ機能のボタンが異なるスタイルで表示される。ユーザーが混乱する。"
+      }
+    ],
+    "aiPromptTip": "類似の法則を意識して、同じ機能のボタンは同じスタイル、異なる機能は異なるスタイルで統一してください",
+    "detectionHints": [
+      "ボタンスタイルの一貫性",
+      "色によるカテゴリ分け",
+      "アイコンスタイル"
+    ],
+    "relatedPrinciples": [
+      "law-of-proximity",
+      "law-of-common-region",
+      "law-of-pragnanz"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/law-of-similarity/",
+      "nnGroup": [
+        {
+          "title": "Gestalt Principles and UI Design",
+          "url": "https://www.nngroup.com/articles/gestalt-similarity/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-closure",
+    "name": {
+      "ja": "閉合の法則",
+      "en": "Law of Closure"
+    },
+    "aliases": [],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "視覚認識",
+      "パターン補完"
+    ],
+    "summary": "不完全な形でも脳が補完して完全な形として認識する",
+    "description": "ゲシュタルト心理学の原則で、不完全な形状や途切れた線を見ても、脳が自動的に欠けた部分を補完して全体像を認識する傾向です。この原理は、カルーセルの次のカードが半分見切れているデザイン（スクロール可能であることを暗示）や、ロゴデザイン（IBMのストライプロゴなど）で活用されます。",
+    "origin": {
+      "researcher": "Max Wertheimer",
+      "year": 1923
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Instagramのストーリーズ",
+        "description": "横スクロールのストーリーズで次のアイコンが半分見切れ、続きがあることを暗示。"
+      },
+      {
+        "type": "bad",
+        "title": "途切れたコンテンツ",
+        "description": "カードが画面端できれいに途切れ、スクロールできることに気づかないデザイン。"
+      }
+    ],
+    "aiPromptTip": "閉合の法則を活用して、カルーセルの次のアイテムを少し見せ、スクロール可能であることを示唆してください",
+    "detectionHints": [
+      "カルーセルのピーク表示",
+      "不完全な図形",
+      "スクロール示唆"
+    ],
+    "relatedPrinciples": [
+      "law-of-continuity",
+      "law-of-pragnanz",
+      "figure-ground"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-continuity",
+    "name": {
+      "ja": "連続の法則",
+      "en": "Law of Continuity"
+    },
+    "aliases": [],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "視覚フロー",
+      "ナビゲーション"
+    ],
+    "summary": "要素が直線や曲線に沿って配置されると連続した流れとして知覚される",
+    "description": "ゲシュタルト心理学の原則で、要素が直線や滑らかな曲線に沿って配置されると、脳はそれを連続した一つのまとまりとして認識します。この原理は、ステッパーUI、タイムライン、プログレスバーなどのデザインに応用されます。視線の自然な流れを誘導するF型・Z型レイアウトもこの原則に基づいています。",
+    "origin": {
+      "researcher": "Max Wertheimer",
+      "year": 1923
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Uberの配車タイムライン",
+        "description": "ドライバーの到着までのステップを縦のタイムラインで表示。進行の流れが直感的にわかる。"
+      },
+      {
+        "type": "bad",
+        "title": "ランダムな配置のステップ",
+        "description": "フォームの入力ステップが視覚的な流れなしにバラバラに配置されている。"
+      }
+    ],
+    "aiPromptTip": "連続の法則を意識して、ステップインジケータやタイムラインを直線的に配置し、視覚的な流れを作ってください",
+    "detectionHints": [
+      "ステップインジケータ",
+      "タイムライン表示",
+      "視覚的な流れ"
+    ],
+    "relatedPrinciples": [
+      "law-of-proximity",
+      "law-of-closure",
+      "law-of-uniform-connectedness"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-common-region",
+    "name": {
+      "ja": "共通領域の法則",
+      "en": "Law of Common Region"
+    },
+    "aliases": [],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "グルーピング",
+      "カードUI"
+    ],
+    "summary": "境界線で囲まれた領域内の要素はグループとして知覚される",
+    "description": "ゲシュタルト心理学の原則で、共通の境界線や背景で囲まれた要素は、一つのグループとして認識されます。これはカード型UIの心理学的根拠となる原理で、情報をカード内にまとめることで視覚的なグルーピングを実現します。背景色の切り替え、ボーダー、シャドウなどでも同じ効果が得られます。",
+    "origin": {
+      "researcher": "Stephen Palmer",
+      "year": 1992
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Trelloのカード型タスク管理",
+        "description": "各タスクがカードで囲まれ、関連情報が視覚的にまとまっている。"
+      },
+      {
+        "type": "bad",
+        "title": "境界のない情報の羅列",
+        "description": "区切り線も背景色の変化もなく、複数の情報ブロックが連続して表示される。"
+      }
+    ],
+    "aiPromptTip": "共通領域の法則を活用して、関連する情報をカードやセクション背景でグループ化してください",
+    "detectionHints": [
+      "カードUI",
+      "セクション背景",
+      "ボーダー",
+      "シャドウ"
+    ],
+    "relatedPrinciples": [
+      "law-of-proximity",
+      "law-of-similarity",
+      "law-of-uniform-connectedness"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/law-of-common-region/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-uniform-connectedness",
+    "name": {
+      "ja": "統一連結の法則",
+      "en": "Law of Uniform Connectedness"
+    },
+    "aliases": [],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "視覚接続",
+      "関係性"
+    ],
+    "summary": "視覚的に接続された要素はより強く関連があると知覚される",
+    "description": "ゲシュタルト心理学の原則で、線や矢印などで物理的に接続された要素は、他のゲシュタルト原則（近接・類似）よりも強い関連性を持つと知覚されます。フローチャート、パンくずリスト、ツリー構造、タブとコンテンツの接続などに活用されます。接続の視覚的要素は、情報の階層構造や因果関係を明確に伝えます。",
+    "origin": {
+      "researcher": "Stephen Palmer & Irvin Rock",
+      "year": 1994
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Figmaのレイヤー接続線",
+        "description": "親コンポーネントと子コンポーネントの関係を線で接続し、階層構造を可視化。"
+      },
+      {
+        "type": "bad",
+        "title": "線の接続のないフローチャート",
+        "description": "ステップ間に接続線がなく、処理の順序や関係が不明確なフロー図。"
+      }
+    ],
+    "aiPromptTip": "統一連結の法則を意識して、関連する要素を線やコネクタで視覚的に接続してください",
+    "detectionHints": [
+      "ライン接続",
+      "フローチャート",
+      "パンくずリスト",
+      "ツリー構造"
+    ],
+    "relatedPrinciples": [
+      "law-of-proximity",
+      "law-of-common-region",
+      "law-of-continuity"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/law-of-uniform-connectedness/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "law-of-pragnanz",
+    "name": {
+      "ja": "プレグナンツの法則",
+      "en": "Law of Prägnanz"
+    },
+    "aliases": [
+      "簡潔の法則",
+      "良い形の法則"
+    ],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "シンプルさ",
+      "パターン認識"
+    ],
+    "summary": "人は複雑な形状を最もシンプルな形として解釈する",
+    "description": "ゲシュタルト心理学の中核原則で、視覚システムは複雑な形状を可能な限りシンプルで秩序ある形に解釈しようとします。オリンピックの五輪マークは5つの円の重なりとして認識され、複雑な交差パターンとは解釈されません。UIデザインでは、アイコンをシンプルに保つ、ミニマルなデザインを心がける、不要な装飾を排除するなどに応用されます。",
+    "origin": {
+      "researcher": "Kurt Koffka",
+      "year": 1935
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Appleのアプリアイコン",
+        "description": "シンプルな幾何学的形状と限られた色数で、一目で機能が理解できるアイコンデザイン。"
+      },
+      {
+        "type": "bad",
+        "title": "過度に装飾的なアイコン",
+        "description": "グラデーション・影・テクスチャが過剰なアイコン。認識に時間がかかる。"
+      }
+    ],
+    "aiPromptTip": "プレグナンツの法則を意識して、アイコンやグラフィックは最もシンプルな形状で表現してください",
+    "detectionHints": [
+      "アイコンのシンプルさ",
+      "ミニマルデザイン",
+      "形状の複雑さ"
+    ],
+    "relatedPrinciples": [
+      "occams-razor",
+      "law-of-similarity",
+      "cognitive-load"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/law-of-pr%C3%A4gnanz/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Principles of Gestalt Psychology",
+          "author": "Kurt Koffka"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "figure-ground",
+    "name": {
+      "ja": "図と地",
+      "en": "Figure-Ground"
+    },
+    "aliases": [
+      "図地分化"
+    ],
+    "category": "perception",
+    "tags": [
+      "ゲシュタルト",
+      "視覚階層",
+      "フォーカス"
+    ],
+    "summary": "視覚的に前景（図）と背景（地）を分離して認識する",
+    "description": "ゲシュタルト心理学の基本原則で、人間の視覚システムは自動的に視覚要素を前景（図）と背景（地）に分離して認識します。モーダルダイアログの背景を暗くするオーバーレイ、フォーカスされた要素のシャドウ効果、ドロップダウンメニューの浮き上がりなどが、この原理のUI応用例です。明確な図地関係は、ユーザーの注意を適切に誘導します。",
+    "origin": {
+      "researcher": "Edgar Rubin",
+      "year": 1915
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "モーダルダイアログのオーバーレイ",
+        "description": "背景を暗くすることで、ダイアログ（図）に注意を集中させる。明確な図地分離。"
+      },
+      {
+        "type": "bad",
+        "title": "背景と区別できないモーダル",
+        "description": "背景のオーバーレイが薄すぎて、モーダルと背景の区別がつきにくい。"
+      }
+    ],
+    "aiPromptTip": "図と地の原則を意識して、モーダルやポップアップは背景との明確なコントラストを確保してください",
+    "detectionHints": [
+      "モーダルUI",
+      "オーバーレイ",
+      "シャドウ",
+      "z-index"
+    ],
+    "relatedPrinciples": [
+      "selective-attention",
+      "von-restorff-effect",
+      "law-of-common-region"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "optical-illusion",
+    "name": {
+      "ja": "視覚調整・錯視",
+      "en": "Optical Illusion & Visual Adjustment"
+    },
+    "aliases": [
+      "ミュラー・リヤー錯視"
+    ],
+    "category": "perception",
+    "tags": [
+      "視覚認知",
+      "デザイン調整",
+      "知覚補正"
+    ],
+    "summary": "人間の目は物理的に正確な配置を正確に知覚しないため視覚的補正が必要",
+    "description": "人間の視覚システムは物理的な正確さと知覚的な正確さが必ずしも一致しません。三角形の再生ボタンアイコンは物理的な中心に置くと左寄りに見えるため、視覚的な中心にずらす必要があります。同様に、丸い要素と四角い要素を同じ大きさにすると、丸い方が小さく見えます。このような錯視への対処が、プロのデザイナーによる「視覚調整」です。",
+    "origin": {
+      "researcher": "Franz Carl Müller-Lyer",
+      "year": 1889
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "再生ボタンの視覚的中心合わせ",
+        "description": "三角形のアイコンを数ピクセル右にずらし、円の中で視覚的に中央に見えるよう調整。"
+      },
+      {
+        "type": "bad",
+        "title": "数学的に正確だが違和感のあるアイコン",
+        "description": "物理的にセンタリングしただけのアイコン。人間の目には不自然に見える。"
+      }
+    ],
+    "aiPromptTip": "視覚調整を意識して、三角形や不規則な形のアイコンは視覚的な中心で配置してください",
+    "detectionHints": [
+      "三角形アイコンの中心補正",
+      "丸と四角の大きさ合わせ",
+      "視覚的バランス"
+    ],
+    "relatedPrinciples": [
+      "law-of-pragnanz",
+      "aesthetic-usability",
+      "cognitive-fluency"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "UIにも必要な錯視への考慮、デザイナーが行う視覚調整",
+          "url": "https://goodpatch.com/blog/visual-adjustiment"
+        }
+      ]
+    }
+  },
+  {
+    "id": "priming-effect",
+    "name": {
+      "ja": "プライミング効果",
+      "en": "Priming Effect"
+    },
+    "aliases": [],
+    "category": "perception",
+    "tags": [
+      "認知バイアス",
+      "無意識",
+      "先行刺激"
+    ],
+    "summary": "先行する刺激が後続の判断や行動に無意識的に影響を与える",
+    "description": "先に提示された情報（プライム）が、その後の情報処理や判断に無意識的に影響を与える現象です。例えば、高級感のある画像を先に見せると、その後の商品をより高品質だと知覚しやすくなります。UIデザインでは、ランディングページの最初のビジュアルがサービス全体の印象を左右する、フォームの最初の質問が後続の回答に影響するなどの形で現れます。",
+    "origin": {
+      "researcher": "David Meyer & Roger Schvaneveldt",
+      "year": 1971
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "高級ホテルの予約サイト",
+        "description": "ファーストビューに美しい客室写真を配置し、サービス全体の品質印象を高める。"
+      },
+      {
+        "type": "bad",
+        "title": "安っぽいストック写真",
+        "description": "ランディングページに低品質な素材写真を使用。サービス全体が安く見える。"
+      }
+    ],
+    "aiPromptTip": "プライミング効果を意識して、ファーストビューには高品質なビジュアルを配置し、ポジティブな第一印象を作ってください",
+    "detectionHints": [
+      "ファーストビューの品質",
+      "画像の印象",
+      "導入コンテンツ"
+    ],
+    "relatedPrinciples": [
+      "halo-effect",
+      "aesthetic-usability",
+      "anchoring-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "cognitive-fluency",
+    "name": {
+      "ja": "認知流暢性",
+      "en": "Cognitive Fluency"
+    },
+    "aliases": [
+      "処理流暢性"
+    ],
+    "category": "perception",
+    "tags": [
+      "認知",
+      "読みやすさ",
+      "信頼性"
+    ],
+    "summary": "処理しやすい情報はより真実で好ましいと感じられる",
+    "description": "認知流暢性とは、情報がどれだけ容易に処理できるかという主観的な感覚です。読みやすいフォント、馴染みのある言葉、シンプルなレイアウトで提示された情報は、より真実で信頼できると感じられます。逆に、読みにくい文字や複雑な構造は不信感を生みます。UIデザインでは、可読性の高いタイポグラフィ、十分な行間、明確なコントラストが認知流暢性を高めます。",
+    "origin": {
+      "researcher": "Rolf Reber, Norbert Schwarz & Piotr Winkielman",
+      "year": 2004
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Mediumの記事表示",
+        "description": "本文16px以上、行間1.7、適切な列幅で読みやすさを最優先した設計。"
+      },
+      {
+        "type": "bad",
+        "title": "小さすぎる文字のフッター",
+        "description": "重要な利用規約を8pxの薄いグレーで表示。読みにくく信頼を損なう。"
+      }
+    ],
+    "aiPromptTip": "認知流暢性を高めるため、本文は16px以上、行間1.7、十分なコントラスト比を確保してください",
+    "detectionHints": [
+      "フォントサイズ",
+      "行間",
+      "コントラスト比",
+      "可読性"
+    ],
+    "relatedPrinciples": [
+      "aesthetic-usability",
+      "cognitive-load",
+      "optical-illusion"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "zeigarnik-effect",
+    "name": {
+      "ja": "ツァイガルニク効果",
+      "en": "Zeigarnik Effect"
+    },
+    "aliases": [],
+    "category": "memory",
+    "tags": [
+      "記憶",
+      "未完了タスク",
+      "エンゲージメント"
+    ],
+    "summary": "未完了のタスクは完了したタスクより記憶に残りやすい",
+    "description": "1927年にブルーマ・ツァイガルニクが発見した心理現象で、完了したタスクよりも未完了のタスクの方がよく記憶に残ります。脳は未完了のタスクに対して認知的な緊張を保ち続けるため、そのタスクへの注意が維持されます。UIデザインでは、プログレスバー、プロフィール完成度表示、オンボーディングのチェックリストなどに活用されます。",
+    "origin": {
+      "researcher": "Bluma Zeigarnik",
+      "year": 1927
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "LinkedInのプロフィール完成度",
+        "description": "プロフィールの完成度を%で表示し、未入力項目を提案。完成させたい欲求を刺激。"
+      },
+      {
+        "type": "bad",
+        "title": "100%にならない進捗バー",
+        "description": "タスクをすべて完了しても進捗が100%にならない。フラストレーションの原因に。"
+      }
+    ],
+    "aiPromptTip": "ツァイガルニク効果を活用して、プロフィール完成度やタスク進捗を可視化し、完了への動機を高めてください",
+    "detectionHints": [
+      "進捗バー",
+      "完了率",
+      "未完了リスト",
+      "チェックリスト"
+    ],
+    "relatedPrinciples": [
+      "goal-gradient-effect",
+      "sunk-cost-effect",
+      "peak-end-rule"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/zeigarnik-effect/",
+      "nnGroup": [
+        {
+          "title": "How to Use the Zeigarnik Effect in UX",
+          "url": "https://www.nngroup.com/videos/zeigarnik-effect/",
+          "type": "video"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Zeigarnik, B.V.",
+          "year": 1927,
+          "title": "Das Behalten erledigter und unerledigter Handlungen",
+          "journal": "Psychologische Forschung"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "serial-position-effect",
+    "name": {
+      "ja": "系列位置効果",
+      "en": "Serial Position Effect"
+    },
+    "aliases": [
+      "初頭効果",
+      "親近効果"
+    ],
+    "category": "memory",
+    "tags": [
+      "記憶",
+      "リスト設計",
+      "ナビゲーション"
+    ],
+    "summary": "リストの最初と最後の項目が最も記憶に残りやすい",
+    "description": "1885年にエビングハウスが発見した記憶の法則で、リストの最初の項目（初頭効果）と最後の項目（親近効果）が中間の項目よりも記憶に残りやすいという現象です。UIデザインでは、タブバーの両端に最も重要な機能を配置する、リストの先頭と末尾に重要な情報を置く、ナビゲーションの最初と最後に主要ページを配置するなどに応用されます。",
+    "origin": {
+      "researcher": "Hermann Ebbinghaus",
+      "year": 1885
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "iOSのタブバー",
+        "description": "左端にホーム、右端にプロフィールなど、最も重要な機能をタブバーの両端に配置。"
+      },
+      {
+        "type": "bad",
+        "title": "重要機能が中央に埋もれたナビ",
+        "description": "5つのタブの真ん中に最重要機能を配置。ユーザーの記憶に残りにくい位置。"
+      }
+    ],
+    "aiPromptTip": "系列位置効果を意識して、ナビゲーションの最初と最後に最も重要な機能を配置してください",
+    "detectionHints": [
+      "ナビゲーションの配置順",
+      "タブバーの構成",
+      "リストの先頭/末尾"
+    ],
+    "relatedPrinciples": [
+      "von-restorff-effect",
+      "peak-end-rule",
+      "selective-attention"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/serial-position-effect/",
+      "nnGroup": [
+        {
+          "title": "Serial Position Effect",
+          "url": "https://www.nngroup.com/articles/serial-position-effect/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "視線誘導を意識したUIデザイン",
+          "url": "https://goodpatch.com/blog/visual-guidance"
+        }
+      ]
+    }
+  },
+  {
+    "id": "von-restorff-effect",
+    "name": {
+      "ja": "フォン・レストルフ効果",
+      "en": "Von Restorff Effect"
+    },
+    "aliases": [
+      "孤立効果"
+    ],
+    "category": "memory",
+    "tags": [
+      "記憶",
+      "視覚的差別化",
+      "CTA"
+    ],
+    "summary": "他と異なる特徴を持つ要素は最も記憶に残りやすい",
+    "description": "1933年にヘドヴィヒ・フォン・レストルフが発見した効果で、均質な項目の中で1つだけ異なる特徴を持つ要素が特に記憶に残りやすいという現象です。UIデザインでは、CTAボタンを周囲と明確に異なる色にする、おすすめプランにバッジを付ける、重要な通知を視覚的に目立たせるなどに活用されます。ただし、目立たせる要素が多すぎると効果が薄れます。",
+    "origin": {
+      "researcher": "Hedwig von Restorff",
+      "year": 1933
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "料金プランの「おすすめ」バッジ",
+        "description": "3つのプランのうち1つだけに色違いの「おすすめ」バッジを付けて視覚的に差別化。"
+      },
+      {
+        "type": "bad",
+        "title": "すべてのボタンが目立つ配色",
+        "description": "ページ上のすべてのボタンが原色で目立つため、どれも目立たなくなっている。"
+      }
+    ],
+    "aiPromptTip": "フォン・レストルフ効果を活用して、CTAボタンは周囲と明確に異なる色・サイズにし、1画面に1つだけ際立たせてください",
+    "detectionHints": [
+      "CTAの視覚的差別化",
+      "ハイライト表示",
+      "バッジ",
+      "色の差別化"
+    ],
+    "relatedPrinciples": [
+      "selective-attention",
+      "serial-position-effect",
+      "figure-ground"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/von-restorff-effect/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Von Restorff, H.",
+          "year": 1933,
+          "title": "Über die Wirkung von Bereichsbildungen im Spurenfeld",
+          "journal": "Psychologische Forschung"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "picture-superiority",
+    "name": {
+      "ja": "画像優位性効果",
+      "en": "Picture Superiority Effect"
+    },
+    "aliases": [],
+    "category": "memory",
+    "tags": [
+      "記憶",
+      "視覚情報",
+      "コンテンツ設計"
+    ],
+    "summary": "画像で提示された情報はテキストよりも記憶に残りやすい",
+    "description": "テキストのみの情報よりも、画像を伴う情報の方が記憶に定着しやすいという効果です。72時間後の記憶テストで、テキストの記憶率が10%だったのに対し、画像付きの情報は65%を記憶していたという研究結果があります。UIデザインでは、機能説明にアイコンや図を添える、テキストだけでなくビジュアルで情報を伝える、エラー画面にイラストを使うなどに応用されます。",
+    "origin": {
+      "researcher": "Allan Paivio",
+      "year": 1971
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Notionの機能紹介",
+        "description": "各機能をテキスト説明とともにGIFアニメーションで示し、理解と記憶を促進。"
+      },
+      {
+        "type": "bad",
+        "title": "テキストだけのヘルプページ",
+        "description": "スクリーンショットや図がなく、文章だけで操作手順を説明するヘルプドキュメント。"
+      }
+    ],
+    "aiPromptTip": "画像優位性効果を活用して、重要な機能説明にはスクリーンショットやアイコンを必ず添えてください",
+    "detectionHints": [
+      "画像の使用",
+      "アイコン付き説明",
+      "ビジュアルガイド"
+    ],
+    "relatedPrinciples": [
+      "cognitive-fluency",
+      "chunking",
+      "emotional-design"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Paivio, A.",
+          "year": 1971,
+          "title": "Imagery and Verbal Processes",
+          "journal": "Psychology Press"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "selective-attention",
+    "name": {
+      "ja": "選択的注意",
+      "en": "Selective Attention"
+    },
+    "aliases": [
+      "見えないゴリラ"
+    ],
+    "category": "attention",
+    "tags": [
+      "注意",
+      "視覚階層",
+      "フォーカス"
+    ],
+    "summary": "目標に関連する情報にのみ注意を向け、それ以外を無視する",
+    "description": "人間の注意資源は限られており、すべての視覚情報を同時に処理することはできません。そのため、現在の目標に関連する情報を選択的に処理し、無関連な情報をフィルタリングします。サイモンズとチャブリスの「見えないゴリラ」実験（1999年）は、注意を向けていない刺激がいかに見落とされるかを劇的に示しました。UIデザインでは、重要な要素を視覚的に強調し、不要な要素を減らすことが重要です。",
+    "origin": {
+      "researcher": "Daniel Simons & Christopher Chabris",
+      "year": 1999,
+      "paper": "Gorillas in Our Midst"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Gmailの未読メール強調",
+        "description": "未読メールを太字で表示し、既読との視覚的差を明確にして注意を誘導。"
+      },
+      {
+        "type": "bad",
+        "title": "重要通知が埋もれるUI",
+        "description": "重要な通知が他の情報と同じ視覚的重みで表示され、見落とされる。"
+      }
+    ],
+    "aiPromptTip": "選択的注意を考慮して、最も重要な情報に視覚的な階層をつけ、ユーザーの注意を誘導してください",
+    "detectionHints": [
+      "視覚的階層",
+      "コントラスト",
+      "フォーカスエリア",
+      "情報の強調"
+    ],
+    "relatedPrinciples": [
+      "banner-blindness",
+      "change-blindness",
+      "von-restorff-effect"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/selective-attention/",
+      "nnGroup": [
+        {
+          "title": "Psychology for UX: Study Guide",
+          "url": "https://www.nngroup.com/articles/psychology-study-guide/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Simons, D.J., & Chabris, C.F.",
+          "year": 1999,
+          "title": "Gorillas in Our Midst",
+          "journal": "Perception"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "視線誘導を意識したUIデザイン",
+          "url": "https://goodpatch.com/blog/visual-guidance"
+        }
+      ]
+    }
+  },
+  {
+    "id": "banner-blindness",
+    "name": {
+      "ja": "バナーブラインドネス",
+      "en": "Banner Blindness"
+    },
+    "aliases": [
+      "バナー盲"
+    ],
+    "category": "attention",
+    "tags": [
+      "注意",
+      "広告",
+      "コンテンツ設計"
+    ],
+    "summary": "ユーザーは広告のように見える要素を無意識に無視する",
+    "description": "1998年にベントン・ビガミとマルサック・ミゲルが発見した現象で、ウェブユーザーは広告バナーやそれに似た要素を意識的・無意識的に無視する傾向があります。これは長年のウェブ利用で学習された行動パターンです。重要な情報がバナー風のデザイン（横長の色付きボックスなど）になっていると見落とされるリスクがあります。",
+    "origin": {
+      "researcher": "Jan Panero Benway & David M. Lane",
+      "year": 1998
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Slackのインライン通知",
+        "description": "重要な情報をコンテンツの流れに自然に組み込み、バナー風に見えない通知デザイン。"
+      },
+      {
+        "type": "bad",
+        "title": "バナー風の重要情報",
+        "description": "サービス停止のお知らせを広告バナーのような色鮮やかな横長デザインで表示。"
+      }
+    ],
+    "aiPromptTip": "バナーブラインドネスを避けるため、重要な情報はバナー風にせず、コンテンツに自然に統合してください",
+    "detectionHints": [
+      "バナー風の要素",
+      "広告枠の配置",
+      "横長のカラーボックス"
+    ],
+    "relatedPrinciples": [
+      "selective-attention",
+      "change-blindness",
+      "inattentional-blindness"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "change-blindness",
+    "name": {
+      "ja": "変化の見落とし",
+      "en": "Change Blindness"
+    },
+    "aliases": [
+      "変化盲"
+    ],
+    "category": "attention",
+    "tags": [
+      "注意",
+      "フィードバック",
+      "状態変化"
+    ],
+    "summary": "視覚的な変化が段階的に起こるとその変化に気づかない",
+    "description": "視覚シーンの変化が瞬きや場面転換などの中断を挟んで起こると、たとえ大きな変化であっても気づかない現象です。UIデザインでは、状態変化時に明確なフィードバック（アニメーション、色の変化、トースト通知）を提供しないと、ユーザーが変化を見落とす可能性があります。フォーム送信後のエラー表示位置や、非同期で更新されるデータの変化通知に注意が必要です。",
+    "origin": {
+      "researcher": "Ronald Rensink",
+      "year": 1997
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "GitHubのプルリクエスト更新通知",
+        "description": "新しいコミットやコメントが追加されたことをトースト通知で明確に伝える。"
+      },
+      {
+        "type": "bad",
+        "title": "エラー表示が画面外",
+        "description": "フォーム送信エラーがページ最上部に表示されるが、ユーザーは最下部にいる。"
+      }
+    ],
+    "aiPromptTip": "変化の見落としを防ぐため、状態変化時にはアニメーションやトースト通知で明確なフィードバックを提供してください",
+    "detectionHints": [
+      "状態変化のフィードバック",
+      "トースト通知",
+      "アニメーション"
+    ],
+    "relatedPrinciples": [
+      "selective-attention",
+      "banner-blindness",
+      "inattentional-blindness"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "より良いUIのためのマイクロインタラクション入門",
+          "url": "https://goodpatch.com/blog/ui-micro-interaction"
+        }
+      ]
+    }
+  },
+  {
+    "id": "inattentional-blindness",
+    "name": {
+      "ja": "非注意性盲目",
+      "en": "Inattentional Blindness"
+    },
+    "aliases": [
+      "不注意盲"
+    ],
+    "category": "attention",
+    "tags": [
+      "注意",
+      "見落とし",
+      "タスク集中"
+    ],
+    "summary": "他の作業に注意を向けていると予期しない刺激が見えなくなる",
+    "description": "あるタスクに集中していると、視野内に存在する予期しない刺激に気づかなくなる現象です。選択的注意の裏返しとして、注意の焦点外の情報は知覚されにくくなります。UIデザインでは、フォーム入力中にヘッダーに表示されるエラーメッセージが見落とされる、タスク実行中に表示されるシステム通知が無視されるなどの問題に関連します。",
+    "origin": {
+      "researcher": "Arien Mack & Irvin Rock",
+      "year": 1998
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Googleフォームのインラインエラー",
+        "description": "入力フィールドの直下にエラーメッセージを表示。ユーザーの注意の焦点に近い位置で通知。"
+      },
+      {
+        "type": "bad",
+        "title": "ページ上部のエラーバナー",
+        "description": "フォーム入力中のエラーをページ最上部のバナーだけで通知。入力に集中しているユーザーが気づかない。"
+      }
+    ],
+    "aiPromptTip": "非注意性盲目を防ぐため、エラーメッセージはユーザーの注意の焦点に近い位置（入力フィールドの直下）に表示してください",
+    "detectionHints": [
+      "インラインエラー",
+      "エラー表示位置",
+      "通知の配置"
+    ],
+    "relatedPrinciples": [
+      "selective-attention",
+      "change-blindness",
+      "banner-blindness"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "Inattentional Blindness in Interfaces",
+          "url": "https://www.nngroup.com/articles/inattentional-blindness/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Simons, D.J., & Chabris, C.F.",
+          "year": 1999,
+          "title": "Gorillas in Our Midst",
+          "journal": "Perception"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "goal-gradient-effect",
+    "name": {
+      "ja": "目標勾配効果",
+      "en": "Goal-Gradient Effect"
+    },
+    "aliases": [],
+    "category": "motivation",
+    "tags": [
+      "動機づけ",
+      "プログレス",
+      "ゲーミフィケーション"
+    ],
+    "summary": "ゴールに近づくほどモチベーションが高まり行動が加速する",
+    "description": "1932年にクラーク・ハルが動物実験で発見し、2006年にキベッツらが人間でも再検証した効果です。ゴールに近づくにつれて努力の量と速度が増加します。コーヒーショップのスタンプカード実験では、最初から2個スタンプが押された12個カードの方が、空の10個カードよりも完了率が高かったという結果が得られています。",
+    "origin": {
+      "researcher": "Clark L. Hull",
+      "year": 1932,
+      "paper": "The goal-gradient hypothesis and maze learning"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Duolingoのデイリーストリーク",
+        "description": "連続日数が増えるほどリワードが大きくなり、ストリークを維持するモチベーションが高まる。"
+      },
+      {
+        "type": "bad",
+        "title": "ゴールが見えないプログレスバー",
+        "description": "全体の何%完了したかがわからないプログレスバー。ゴールとの距離が不明。"
+      }
+    ],
+    "aiPromptTip": "目標勾配効果を活用して、プログレスバーを初期状態から少し進んだ状態で開始し、完了までの距離を可視化してください",
+    "detectionHints": [
+      "プログレスバー",
+      "達成度表示",
+      "マイルストーン",
+      "ストリーク"
+    ],
+    "relatedPrinciples": [
+      "zeigarnik-effect",
+      "sunk-cost-effect",
+      "variable-reward"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/goal-gradient-effect/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Hull, C.L.",
+          "year": 1932,
+          "title": "The goal-gradient hypothesis and maze learning",
+          "journal": "Psychological Review"
+        },
+        {
+          "authors": "Kivetz, R., Urminsky, O., & Zheng, Y.",
+          "year": 2006,
+          "title": "The Goal-Gradient Hypothesis Resurrected",
+          "journal": "Journal of Marketing Research"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "flow",
+    "name": {
+      "ja": "フロー状態",
+      "en": "Flow"
+    },
+    "aliases": [
+      "ゾーン"
+    ],
+    "category": "motivation",
+    "tags": [
+      "動機づけ",
+      "没入",
+      "体験設計"
+    ],
+    "summary": "挑戦とスキルが釣り合った状態で完全に没入する精神状態",
+    "description": "1990年にミハイ・チクセントミハイが提唱した概念で、タスクの難易度と自分のスキルレベルが適切にバランスした状態で、時間の感覚を忘れるほどの没入感を体験する精神状態です。フローを維持するには、明確な目標、即時のフィードバック、適切な難易度、中断の最小化が必要です。UIデザインでは、オンボーディングの難易度調整、通知による中断の制御、ゲーミフィケーションの設計に関連します。",
+    "origin": {
+      "researcher": "Mihaly Csikszentmihalyi",
+      "year": 1990
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Figmaのリアルタイムコラボレーション",
+        "description": "操作の即時反映、自動保存、最小限の中断で、デザインに集中できるフロー状態を支援。"
+      },
+      {
+        "type": "bad",
+        "title": "頻繁なポップアップ通知",
+        "description": "作業中に関係のない通知が頻繁に表示され、集中状態が繰り返し中断される。"
+      }
+    ],
+    "aiPromptTip": "フロー状態を支援するため、操作への即時フィードバック、不要な通知の抑制、適切な難易度設計を心がけてください",
+    "detectionHints": [
+      "即時フィードバック",
+      "通知の制御",
+      "自動保存",
+      "中断の最小化"
+    ],
+    "relatedPrinciples": [
+      "doherty-threshold",
+      "intrinsic-motivation",
+      "peak-end-rule"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/flow/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Flow: The Psychology of Optimal Experience",
+          "author": "Mihaly Csikszentmihalyi"
+        }
+      ],
+      "goodpatchBlog": [
+        {
+          "title": "【イカしたUIを見る】Vol.6 2025年ベストアプリ3選",
+          "url": "https://goodpatch.com/blog/2025-12-good-ui-6"
+        }
+      ]
+    }
+  },
+  {
+    "id": "intrinsic-motivation",
+    "name": {
+      "ja": "内発的動機づけ",
+      "en": "Intrinsic Motivation"
+    },
+    "aliases": [],
+    "category": "motivation",
+    "tags": [
+      "動機づけ",
+      "ゲーミフィケーション",
+      "エンゲージメント"
+    ],
+    "summary": "外的報酬ではなく活動そのものへの興味・楽しさから動機づけられる",
+    "description": "外的な報酬（お金、ポイント）ではなく、活動自体への興味、楽しさ、達成感によって行動が動機づけられることを指します。デシとライアンの自己決定理論の基盤となる概念です。UIデザインでは、ポイントやバッジなどの外発的報酬に頼りすぎると、報酬がなくなった時にモチベーションが消える「アンダーマイニング効果」が起こるリスクがあります。",
+    "origin": {
+      "researcher": "Edward L. Deci",
+      "year": 1975
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Duolingoの学習体験",
+        "description": "ゲーミフィケーション要素に加え、学習の進捗可視化で「上達している」という内発的な喜びを演出。"
+      },
+      {
+        "type": "bad",
+        "title": "ポイントだけのインセンティブ",
+        "description": "行動すべてにポイントを付与するが、活動自体の楽しさの設計が不足。ポイント切れで離脱。"
+      }
+    ],
+    "aiPromptTip": "内発的動機づけを高めるため、ユーザーが達成感や成長を実感できるフィードバックを設計してください",
+    "detectionHints": [
+      "ゲーミフィケーション",
+      "達成感の演出",
+      "自己表現の場",
+      "進捗可視化"
+    ],
+    "relatedPrinciples": [
+      "self-determination",
+      "flow",
+      "variable-reward"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "self-determination",
+    "name": {
+      "ja": "自己決定理論",
+      "en": "Self-Determination Theory"
+    },
+    "aliases": [
+      "SDT"
+    ],
+    "category": "motivation",
+    "tags": [
+      "動機づけ",
+      "自律性",
+      "心理的欲求"
+    ],
+    "summary": "自律性・有能感・関係性の3つの基本的心理欲求が内発的動機を支える",
+    "description": "デシとライアンが1985年に体系化した理論で、人間の内発的動機づけは3つの基本的心理欲求によって支えられるとします。自律性（自分で選択・制御できる感覚）、有能感（スキルの向上・成功を感じられる）、関係性（他者とのつながりを感じられる）。UIデザインでは、カスタマイズ機能（自律性）、スキル表示（有能感）、コミュニティ機能（関係性）で応用されます。",
+    "origin": {
+      "researcher": "Edward L. Deci & Richard M. Ryan",
+      "year": 1985
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Spotifyのプレイリスト作成",
+        "description": "自分だけのプレイリスト作成（自律性）、音楽知識の表示（有能感）、共有機能（関係性）の3要素を満たす。"
+      },
+      {
+        "type": "bad",
+        "title": "カスタマイズ不可のアプリ",
+        "description": "表示の並び替え、テーマ変更、通知設定などの自由度がなく、画一的な体験。"
+      }
+    ],
+    "aiPromptTip": "自己決定理論の3要素（自律性・有能感・関係性）を満たす機能を設計してください",
+    "detectionHints": [
+      "カスタマイズオプション",
+      "スキル表示",
+      "コミュニティ機能"
+    ],
+    "relatedPrinciples": [
+      "intrinsic-motivation",
+      "flow",
+      "ikea-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "variable-reward",
+    "name": {
+      "ja": "可変報酬",
+      "en": "Variable Reward"
+    },
+    "aliases": [
+      "間欠強化"
+    ],
+    "category": "motivation",
+    "tags": [
+      "動機づけ",
+      "習慣形成",
+      "エンゲージメント"
+    ],
+    "summary": "予測不能な報酬は固定報酬よりも強い動機づけを生む",
+    "description": "B.F.スキナーのオペラント条件づけ研究に基づく概念で、予測可能な報酬よりも、いつ・どのような報酬が得られるかが不確実な方が、行動を維持する強い動機づけとなります。SNSのフィード更新、通知の不確実性、ガチャなどがデジタルプロダクトでの代表的な活用例です。ニール・イヤールの「Hooked」モデルでも中核概念として取り上げられています。",
+    "origin": {
+      "researcher": "B.F. Skinner",
+      "year": 1957
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Twitterの「プルトゥリフレッシュ」",
+        "description": "フィードを引っ張ると新しいコンテンツが表示されるが、何が出るかは予測不能。継続的な確認行動を促す。"
+      },
+      {
+        "type": "bad",
+        "title": "過度なガチャ要素",
+        "description": "アプリ内課金でしか得られないランダム報酬。依存性を高めるダークパターン。"
+      }
+    ],
+    "aiPromptTip": "可変報酬を倫理的に活用して、コンテンツの更新に適度な不確実性を持たせ、再訪のモチベーションを高めてください",
+    "detectionHints": [
+      "プルトゥリフレッシュ",
+      "ランダム報酬",
+      "サプライズ要素",
+      "通知の不確実性"
+    ],
+    "relatedPrinciples": [
+      "intrinsic-motivation",
+      "goal-gradient-effect",
+      "sunk-cost-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Hooked: How to Build Habit-Forming Products",
+          "author": "Nir Eyal"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "paradox-of-active-user",
+    "name": {
+      "ja": "アクティブユーザーのパラドックス",
+      "en": "Paradox of the Active User"
+    },
+    "aliases": [],
+    "category": "motivation",
+    "tags": [
+      "ユーザビリティ",
+      "オンボーディング",
+      "学習"
+    ],
+    "summary": "ユーザーはマニュアルを読まずすぐにソフトウェアを使い始める",
+    "description": "1987年にキャロルとロッソンが提唱した概念で、ユーザーは新しいソフトウェアの使い方を学ぶよりも、すぐに使い始めて試行錯誤することを好むという傾向です。マニュアルを読む時間が「無駄」と感じられ、既知の方法で目の前のタスクを片付けることが優先されます。結果として、効率的な機能を見逃し続ける場合があります。直感的なUIと段階的なオンボーディングが重要です。",
+    "origin": {
+      "researcher": "John M. Carroll & Mary Beth Rosson",
+      "year": 1987
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Slackのインタラクティブチュートリアル",
+        "description": "初回利用時にSlackbotがメッセージを送り、実際の操作を通じて機能を学べる設計。"
+      },
+      {
+        "type": "bad",
+        "title": "長文のユーザーガイドPDF",
+        "description": "初回ログイン時に50ページのPDFマニュアルのリンクだけが表示される。誰も読まない。"
+      }
+    ],
+    "aiPromptTip": "アクティブユーザーのパラドックスを考慮して、直感的に使えるUIと段階的なオンボーディングを設計してください",
+    "detectionHints": [
+      "直感的なUI",
+      "ツールチップ",
+      "段階的オンボーディング",
+      "インタラクティブチュートリアル"
+    ],
+    "relatedPrinciples": [
+      "jakobs-law",
+      "teslers-law",
+      "mental-model"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/paradox-of-the-active-user/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Carroll, J.M., & Rosson, M.B.",
+          "year": 1987,
+          "title": "Paradox of the Active User",
+          "journal": "MIT Press"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "UI/UX改善とは？チェックリスト付",
+          "url": "https://goodpatch.com/blog/ui-ux-improvement"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bandwagon-effect",
+    "name": {
+      "ja": "バンドワゴン効果",
+      "en": "Bandwagon Effect"
+    },
+    "aliases": [
+      "勝ち馬効果"
+    ],
+    "category": "social",
+    "tags": [
+      "社会心理",
+      "集団行動",
+      "トレンド"
+    ],
+    "summary": "多くの人が選んでいる選択肢にさらに人が集まる",
+    "description": "人は他の多くの人が行っている行動や選択を、正しいものとして追随する傾向があります。これは社会的証明の一形態で、不確実な状況での意思決定コストを削減する適応的な行動でもあります。UIでは「人気のキーワード」「トレンド」「いいね数」などの表示がこの効果を活用しています。ただし、虚偽の数字でユーザーを誘導するのはダークパターンです。",
+    "origin": {
+      "researcher": "Harvey Leibenstein",
+      "year": 1950
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "App Storeのランキング",
+        "description": "ダウンロード数に基づくランキング表示で、人気アプリの発見を支援。"
+      },
+      {
+        "type": "bad",
+        "title": "捏造されたフォロワー数",
+        "description": "実態のないフォロワー数や「いいね」数を水増し表示。信頼性を損なう。"
+      }
+    ],
+    "aiPromptTip": "バンドワゴン効果を活用して、人気コンテンツやトレンドの表示を目立つ位置に配置してください",
+    "detectionHints": [
+      "ランキング",
+      "トレンド表示",
+      "人気タグ",
+      "いいね数"
+    ],
+    "relatedPrinciples": [
+      "social-proof",
+      "authority-bias",
+      "halo-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "authority-bias",
+    "name": {
+      "ja": "権威バイアス",
+      "en": "Authority Bias"
+    },
+    "aliases": [],
+    "category": "social",
+    "tags": [
+      "社会心理",
+      "信頼性",
+      "専門家"
+    ],
+    "summary": "権威ある人物・組織の意見を信頼しやすい",
+    "description": "権威ある人物や組織の意見や推薦を、内容の正当性に関わらず信頼しやすい傾向です。ミルグラムの服従実験（1963年）が有名ですが、UIでは専門家の推薦コメント、メディア掲載ロゴ（As seen in...）、認証バッジ、資格・受賞歴の表示などに活用されます。信頼性の構築に有効ですが、虚偽の権威表示は倫理的に問題があります。",
+    "origin": {
+      "researcher": "Stanley Milgram",
+      "year": 1963
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "ランディングページのメディアロゴ",
+        "description": "「Forbes, TechCrunch, Wiredで紹介」とロゴを並べ、サービスの信頼性を視覚的に伝える。"
+      },
+      {
+        "type": "bad",
+        "title": "架空の専門家レビュー",
+        "description": "存在しない「専門家」の推薦文を掲載。発覚すれば信頼を完全に失う。"
+      }
+    ],
+    "aiPromptTip": "権威バイアスを活用して、専門家の推薦、メディア掲載実績、認証バッジを信頼性セクションに配置してください",
+    "detectionHints": [
+      "専門家コメント",
+      "ロゴ掲載",
+      "認証マーク",
+      "受賞歴"
+    ],
+    "relatedPrinciples": [
+      "social-proof",
+      "halo-effect",
+      "bandwagon-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Influence: The Psychology of Persuasion",
+          "author": "Robert B. Cialdini"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "ikea-effect",
+    "name": {
+      "ja": "IKEA効果",
+      "en": "IKEA Effect"
+    },
+    "aliases": [],
+    "category": "social",
+    "tags": [
+      "所有感",
+      "カスタマイズ",
+      "エンゲージメント"
+    ],
+    "summary": "自分が労力をかけて作ったものに本来以上の価値を感じる",
+    "description": "2011年にノートン、モチョン、アリエリーが発表した研究で、自分で組み立てた家具（IKEAのように）に、既製品より高い価値を付与する傾向が実証されました。デジタルプロダクトでは、カスタマイズ機能、ユーザー生成コンテンツ、プレイリスト作成、アバター設定などを通じて、ユーザーに「自分が作った」という感覚を提供することでエンゲージメントを高められます。",
+    "origin": {
+      "researcher": "Michael I. Norton, Daniel Mochon & Dan Ariely",
+      "year": 2011
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Spotifyのプレイリスト",
+        "description": "ユーザーが自分でプレイリストを作成し、カバー画像を設定できる。自分だけの作品になる。"
+      },
+      {
+        "type": "bad",
+        "title": "設定できないダッシュボード",
+        "description": "ウィジェットの追加・削除・並び替えができない固定レイアウトのダッシュボード。"
+      }
+    ],
+    "aiPromptTip": "IKEA効果を活用して、ユーザーが自分でカスタマイズ・作成できる機能を提供してください",
+    "detectionHints": [
+      "カスタマイズUI",
+      "ユーザー作成コンテンツ",
+      "プレイリスト",
+      "アバター"
+    ],
+    "relatedPrinciples": [
+      "endowment-effect",
+      "self-determination",
+      "sunk-cost-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Norton, M.I., Mochon, D., & Ariely, D.",
+          "year": 2011,
+          "title": "The IKEA Effect: When Labor Leads to Love",
+          "journal": "Journal of Consumer Psychology"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "halo-effect",
+    "name": {
+      "ja": "ハロー効果",
+      "en": "Halo Effect"
+    },
+    "aliases": [
+      "光背効果"
+    ],
+    "category": "social",
+    "tags": [
+      "認知バイアス",
+      "第一印象",
+      "ブランド"
+    ],
+    "summary": "ある良い特徴がその人・ものの他の特徴の評価にも好影響を与える",
+    "description": "エドワード・ソーンダイクが1920年に発見した認知バイアスで、対象のある側面が優れていると、他の無関係な側面まで優れていると判断してしまう傾向です。美しいウェブサイトは信頼できる企業だと認知される、有名ブランドの製品は品質が良いと思われる、などがUIでの例です。美的ユーザビリティ効果の根底にもこのバイアスがあります。",
+    "origin": {
+      "researcher": "Edward Thorndike",
+      "year": 1920
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Appleのブランド体験",
+        "description": "パッケージデザインから開封体験まで美しく設計され、製品全体への期待と信頼が高まる。"
+      },
+      {
+        "type": "bad",
+        "title": "美しいが使いにくいアプリ",
+        "description": "視覚的には洗練されているが、基本的な操作が直感的でないアプリ。見た目への過信。"
+      }
+    ],
+    "aiPromptTip": "ハロー効果を意識して、第一印象を形成するファーストビューのデザイン品質を特に高くしてください",
+    "detectionHints": [
+      "デザインの品質",
+      "ブランドイメージ",
+      "第一印象",
+      "ビジュアルの統一感"
+    ],
+    "relatedPrinciples": [
+      "aesthetic-usability",
+      "priming-effect",
+      "authority-bias"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": [
+        {
+          "title": "【イカしたUIを見る】Vol.6 2025年ベストアプリ3選",
+          "url": "https://goodpatch.com/blog/2025-12-good-ui-6"
+        }
+      ]
+    }
+  },
+  {
+    "id": "false-consensus",
+    "name": {
+      "ja": "フォールスコンセンサス効果",
+      "en": "False-Consensus Effect"
+    },
+    "aliases": [
+      "偽の合意効果"
+    ],
+    "category": "social",
+    "tags": [
+      "認知バイアス",
+      "UXリサーチ",
+      "デザイナーバイアス"
+    ],
+    "summary": "自分の意見や行動が多数派だと過大評価する傾向",
+    "description": "1977年にロスらが発見した認知バイアスで、自分の意見、価値観、行動が一般的であり、多数の人も同じように考えていると過大に見積もる傾向です。UXデザインでは「自分がユーザーではない」ことを認識することが重要です。デザイナーやエンジニアが自分の使い方を一般ユーザーの代表と思い込むと、使いにくいUIが生まれます。ユーザーテストの重要性を裏付けるバイアスです。",
+    "origin": {
+      "researcher": "Lee Ross",
+      "year": 1977
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "定期的なユーザーテスト",
+        "description": "デザイナーの思い込みをチェックするため、実際のユーザーでのテストを反復的に実施。"
+      },
+      {
+        "type": "bad",
+        "title": "デザイナーの好みで決めたUI",
+        "description": "ユーザー調査なしに「みんなこうすれば使いやすいはず」と決めた設計。"
+      }
+    ],
+    "aiPromptTip": "フォールスコンセンサス効果に注意し、自分の使い方がユーザーの代表ではないことを意識してデザインしてください",
+    "detectionHints": [
+      "ユーザーテスト",
+      "ペルソナ設計",
+      "デザイナーバイアス"
+    ],
+    "relatedPrinciples": [
+      "confirmation-bias",
+      "jakobs-law",
+      "mental-model"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "The False-Consensus Effect: You Are Not the User",
+          "url": "https://www.nngroup.com/videos/false-consensus-effect/",
+          "type": "video"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "hawthorne-effect",
+    "name": {
+      "ja": "ホーソン効果",
+      "en": "Hawthorne Effect"
+    },
+    "aliases": [
+      "観察者効果"
+    ],
+    "category": "social",
+    "tags": [
+      "社会心理",
+      "UXリサーチ",
+      "行動変容"
+    ],
+    "summary": "観察されていると意識すると行動が変わる",
+    "description": "1920〜30年代のホーソン工場での実験に由来する現象で、被験者が観察されていると認識すると、普段と異なる行動をとる傾向があります。UXリサーチでは、ユーザビリティテスト中にユーザーが普段より慎重に操作したり、テスト者に好印象を与えようとしたりする形で現れます。自然な行動を観察するためには、リモート非同期テストやA/Bテストなどの工夫が必要です。",
+    "origin": {
+      "researcher": "Elton Mayo",
+      "year": 1933
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Hotjarのヒートマップ分析",
+        "description": "ユーザーが気づかない形で行動データを収集し、自然な利用パターンを分析。"
+      },
+      {
+        "type": "bad",
+        "title": "対面ユーザーテストのみに依存",
+        "description": "対面でのユーザビリティテストだけで判断。被験者の自然な行動を捉えられていない可能性。"
+      }
+    ],
+    "aiPromptTip": "ホーソン効果に注意し、ユーザーテストでは自然な行動を引き出す環境設計を心がけてください",
+    "detectionHints": [
+      "ユーザーテスト",
+      "行動分析",
+      "ヒートマップ",
+      "A/Bテスト"
+    ],
+    "relatedPrinciples": [
+      "false-consensus",
+      "social-proof",
+      "confirmation-bias"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "nudge",
+    "name": {
+      "ja": "ナッジ理論",
+      "en": "Nudge Theory"
+    },
+    "aliases": [
+      "ナッジ"
+    ],
+    "category": "persuasion",
+    "tags": [
+      "行動経済学",
+      "選択アーキテクチャ",
+      "意思決定"
+    ],
+    "summary": "選択の自由を残しつつ望ましい行動を促す環境設計",
+    "description": "リチャード・ターレーとキャス・サンスティーンが2008年に体系化した概念で、禁止や強制ではなく、選択環境のデザインによって人々の行動をより良い方向に導くアプローチです。カフェテリアでサラダを目の高さに置く、臓器提供のデフォルトをオプトアウトにする、階段を楽しくデザインするなどが有名な例です。UIでは、デフォルト設定、推奨マーク、選択肢の順序などがナッジです。",
+    "origin": {
+      "researcher": "Richard Thaler & Cass Sunstein",
+      "year": 2008
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Googleフライトの環境負荷表示",
+        "description": "フライト選択時にCO2排出量を表示し、環境に配慮した選択を自然に促す。"
+      },
+      {
+        "type": "bad",
+        "title": "操作的なナッジ",
+        "description": "退会ボタンを隠し、退会フローを複雑にする。ナッジの倫理的範囲を逸脱。"
+      }
+    ],
+    "aiPromptTip": "ナッジの原則を活かして、ユーザーが自然と望ましい行動を取れるデフォルト設計にしてください",
+    "detectionHints": [
+      "デフォルト設定",
+      "推奨表示",
+      "順序の工夫",
+      "選択アーキテクチャ"
+    ],
+    "relatedPrinciples": [
+      "default-effect",
+      "framing-effect",
+      "loss-aversion"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Nudge: Improving Decisions About Health, Wealth, and Happiness",
+          "author": "Richard Thaler & Cass Sunstein"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "scarcity",
+    "name": {
+      "ja": "希少性の原理",
+      "en": "Scarcity Principle"
+    },
+    "aliases": [],
+    "category": "persuasion",
+    "tags": [
+      "説得",
+      "コンバージョン",
+      "行動経済学"
+    ],
+    "summary": "手に入りにくいものほど価値が高く感じられる",
+    "description": "チャルディーニが説得の6原則の一つとして体系化した概念で、入手が難しいもの、数量が限られているもの、期間が限定されているものに、人はより高い価値を感じます。これは損失回避と結びつき、「手に入れられなくなるかもしれない」という恐れが行動を促進します。「残りわずか」「期間限定」「あと○時間」などの表示に活用されますが、虚偽の希少性表示はダークパターンです。",
+    "origin": {
+      "researcher": "Robert B. Cialdini",
+      "year": 1984
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Booking.comの残室表示",
+        "description": "リアルタイムの空室数を表示し、予約の緊急性を正直に伝える。"
+      },
+      {
+        "type": "bad",
+        "title": "常に「残り1個」の表示",
+        "description": "在庫が十分あるのに常に「残り1個」と表示する虚偽の希少性演出。"
+      }
+    ],
+    "aiPromptTip": "希少性の原理を誠実に活用して、実際の在庫状況や期限を正確に伝えてコンバージョンを促進してください",
+    "detectionHints": [
+      "カウントダウンタイマー",
+      "在庫数表示",
+      "期間限定バッジ",
+      "限定表示"
+    ],
+    "relatedPrinciples": [
+      "loss-aversion",
+      "social-proof",
+      "commitment-consistency"
+    ],
+    "references": {
+      "nnGroup": [
+        {
+          "title": "Scarcity Principle: Making Users Click RIGHT NOW",
+          "url": "https://www.nngroup.com/articles/scarcity-principle-ux/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Influence: The Psychology of Persuasion",
+          "author": "Robert B. Cialdini"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "reciprocity",
+    "name": {
+      "ja": "返報性の法則",
+      "en": "Reciprocity"
+    },
+    "aliases": [
+      "返報性の原理"
+    ],
+    "category": "persuasion",
+    "tags": [
+      "説得",
+      "コンバージョン",
+      "無料戦略"
+    ],
+    "summary": "何かをもらうとお返しをしたくなる心理",
+    "description": "チャルディーニの説得の6原則の一つで、人は他者から何かを受け取ると、そのお返しをしなければならないという社会的義務感を感じます。UIでは無料トライアル、無料コンテンツの提供、サンプルの配布などがこの原理を活用しています。先に価値を提供することで、ユーザーのコンバージョン（有料会員登録、情報提供など）への心理的ハードルを下げます。",
+    "origin": {
+      "researcher": "Robert B. Cialdini",
+      "year": 1984
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "HubSpotの無料ツール提供",
+        "description": "マーケティングツールを無料で提供し、価値を実感したユーザーが有料プランに移行。"
+      },
+      {
+        "type": "bad",
+        "title": "無料を装った個人情報収集",
+        "description": "「無料レポート」と引き換えに過度な個人情報の入力を要求。不信感を生む。"
+      }
+    ],
+    "aiPromptTip": "返報性の法則を活用して、まず無料で価値のあるコンテンツを提供し、信頼構築後に有料プランを提案してください",
+    "detectionHints": [
+      "無料提供",
+      "無料トライアル",
+      "サンプル配布",
+      "フリーミアム"
+    ],
+    "relatedPrinciples": [
+      "social-proof",
+      "commitment-consistency",
+      "endowment-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Influence: The Psychology of Persuasion",
+          "author": "Robert B. Cialdini"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "commitment-consistency",
+    "name": {
+      "ja": "コミットメントと一貫性",
+      "en": "Commitment & Consistency"
+    },
+    "aliases": [
+      "一貫性の原理"
+    ],
+    "category": "persuasion",
+    "tags": [
+      "説得",
+      "段階的要求",
+      "コンバージョン"
+    ],
+    "summary": "一度表明した立場や行動に一貫性を保とうとする",
+    "description": "チャルディーニの説得の6原則の一つで、人は一度小さなコミットメント（行動や発言）をすると、それに一貫した行動を取り続けようとする傾向があります。UIでは「フット・イン・ザ・ドア」テクニックとして応用され、メール登録→無料トライアル→有料会員という段階的なコンバージョンフローがこれにあたります。小さなYesの積み重ねが大きなコンバージョンにつながります。",
+    "origin": {
+      "researcher": "Robert B. Cialdini",
+      "year": 1984
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "アンケート後のCTA",
+        "description": "「UX改善に興味がありますか？」→「はい」→関連サービスの提案。回答した一貫性で受容率が上がる。"
+      },
+      {
+        "type": "bad",
+        "title": "最初から大きな要求",
+        "description": "初回訪問でいきなり有料プランの登録を求める。段階的なコミットメントがない。"
+      }
+    ],
+    "aiPromptTip": "コミットメントと一貫性を活用して、小さなアクション（メール登録など）から段階的に大きなコンバージョンへ誘導してください",
+    "detectionHints": [
+      "段階的なコミットメント",
+      "マイクロコンバージョン",
+      "フット・イン・ザ・ドア"
+    ],
+    "relatedPrinciples": [
+      "sunk-cost-effect",
+      "reciprocity",
+      "nudge"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Influence: The Psychology of Persuasion",
+          "author": "Robert B. Cialdini"
+        }
+      ],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "emotional-design",
+    "name": {
+      "ja": "感情デザイン",
+      "en": "Emotional Design"
+    },
+    "aliases": [
+      "ドン・ノーマンの3レベル"
+    ],
+    "category": "emotion",
+    "tags": [
+      "感情",
+      "UXデザイン",
+      "ブランド体験"
+    ],
+    "summary": "本能的レベル・行動的レベル・内省的レベルの3層で感情に訴える設計",
+    "description": "ドン・ノーマンが2004年に提唱した感情デザインの3レベルモデルです。本能的レベル（見た目の美しさ、第一印象）、行動的レベル（使い心地、機能性、効率性）、内省的レベル（ブランドストーリー、自己イメージ、所有の喜び）。優れたプロダクトはこの3層すべてで感情的な満足を提供します。UIデザインでは、視覚的な美しさ+機能的な使いやすさ+意味のある体験の三位一体が理想です。",
+    "origin": {
+      "researcher": "Don Norman",
+      "year": 2004
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Airbnbの体験予約",
+        "description": "美しい写真（本能的）、スムーズな予約フロー（行動的）、「暮らすように旅する」ストーリー（内省的）の3層。"
+      },
+      {
+        "type": "bad",
+        "title": "機能だけの業務システム",
+        "description": "効率的だが無味乾燥なUI。作業モチベーションに影響する。"
+      }
+    ],
+    "aiPromptTip": "感情デザインの3レベルを意識して、見た目の美しさ、使いやすさ、ブランドストーリーの3層で感情に訴えるデザインにしてください",
+    "detectionHints": [
+      "ビジュアルの品質",
+      "マイクロインタラクション",
+      "ブランドストーリー",
+      "感情的なコピーライティング"
+    ],
+    "relatedPrinciples": [
+      "aesthetic-usability",
+      "peak-end-rule",
+      "contour-bias"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "Emotional Design",
+          "author": "Don Norman"
+        }
+      ],
+      "goodpatchBlog": [
+        {
+          "title": "メンタルモデルとは何か？",
+          "url": "https://goodpatch.com/blog/design-mentalmodel"
+        }
+      ]
+    }
+  },
+  {
+    "id": "contour-bias",
+    "name": {
+      "ja": "輪郭線バイアス",
+      "en": "Contour Bias"
+    },
+    "aliases": [],
+    "category": "emotion",
+    "tags": [
+      "感情",
+      "形状",
+      "角丸"
+    ],
+    "summary": "角丸の形状は親しみやすく、鋭角は攻撃的に感じる",
+    "description": "丸みを帯びた形状は安全で親しみやすいと感じられ、鋭い角を持つ形状は危険や攻撃性を連想させるという視覚的バイアスです。これは進化的な適応（鋭い形状=危険な物体）に由来すると考えられています。UIデザインでは、ボタンの角丸（rounded corners）が心理的な親しみやすさを生み、カードUIのborder-radiusが情報の「柔らかさ」を演出します。",
+    "origin": {
+      "researcher": "Moshe Bar & Maital Neta",
+      "year": 2006
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "iOSのアプリアイコン",
+        "description": "統一された角丸のスーパー楕円形。親しみやすく、タップしたくなる形状。"
+      },
+      {
+        "type": "bad",
+        "title": "鋭角なエラーダイアログ",
+        "description": "角が尖ったダイアログボックスでエラーを表示。不安感を増幅させる。"
+      }
+    ],
+    "aiPromptTip": "輪郭線バイアスを意識して、ボタンやカードには角丸（border-radius: 8px以上）を適用し、親しみやすい印象にしてください",
+    "detectionHints": [
+      "角丸の使用",
+      "シャープ vs ソフト",
+      "ボタンの形状"
+    ],
+    "relatedPrinciples": [
+      "aesthetic-usability",
+      "emotional-design",
+      "cognitive-fluency"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Bar, M., & Neta, M.",
+          "year": 2006,
+          "title": "Humans Prefer Curved Visual Objects",
+          "journal": "Psychological Science"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "cocktail-party",
+    "name": {
+      "ja": "カクテルパーティー効果",
+      "en": "Cocktail Party Effect"
+    },
+    "aliases": [],
+    "category": "emotion",
+    "tags": [
+      "注意",
+      "パーソナライズ",
+      "名前"
+    ],
+    "summary": "騒がしい環境でも自分に関連する情報を選択的に処理できる",
+    "description": "1953年にコリン・チェリーが研究した現象で、雑音の多い環境でも自分の名前や関心のあるキーワードは自動的に注意が向けられます。これは選択的注意の一形態で、自分にとって重要な情報にはフィルタリングが解除されるためです。UIでは、ユーザーの名前を表示する、パーソナライズされたコンテンツを提供する、「○○さんへのおすすめ」と呼びかけるなどに応用されます。",
+    "origin": {
+      "researcher": "Edward Colin Cherry",
+      "year": 1953
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Amazonの「○○さんへのおすすめ」",
+        "description": "ユーザー名を使った呼びかけとパーソナライズされた商品提案。自分事として注意を引く。"
+      },
+      {
+        "type": "bad",
+        "title": "一般的な「お客様へ」",
+        "description": "パーソナライズなしの汎用メッセージ。自分事として感じられず注意が向かない。"
+      }
+    ],
+    "aiPromptTip": "カクテルパーティー効果を活用して、ユーザーの名前を含むパーソナライズされたメッセージで注意を引いてください",
+    "detectionHints": [
+      "パーソナライズ要素",
+      "名前の表示",
+      "個別のおすすめ"
+    ],
+    "relatedPrinciples": [
+      "selective-attention",
+      "priming-effect",
+      "von-restorff-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "cognitive-dissonance",
+    "name": {
+      "ja": "認知的不協和",
+      "en": "Cognitive Dissonance"
+    },
+    "aliases": [],
+    "category": "emotion",
+    "tags": [
+      "認知バイアス",
+      "矛盾",
+      "態度変容"
+    ],
+    "summary": "自分の行動と信念が矛盾すると不快感を感じ、一致させようとする",
+    "description": "1957年にレオン・フェスティンガーが提唱した理論で、人は自分の信念・態度と実際の行動が矛盾した状態（不協和）に不快感を覚え、その不快感を解消しようと信念か行動のどちらかを変えます。UIでは、購入後のサンキューページで「正しい選択をしました」と伝える（バイヤーズリモース対策）、サブスクリプション解約時に利用実績を見せるなどに関連します。",
+    "origin": {
+      "researcher": "Leon Festinger",
+      "year": 1957
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "購入完了後の安心メッセージ",
+        "description": "「素晴らしい選択です」「30日間返品可能」で購入後の不安を解消し、認知的不協和を軽減。"
+      },
+      {
+        "type": "bad",
+        "title": "購入直後のアップセル",
+        "description": "購入完了直後に「こちらの方がお得でした」と表示。購入判断への後悔を誘発。"
+      }
+    ],
+    "aiPromptTip": "認知的不協和を軽減するため、ユーザーの選択を肯定し、購入後の安心感を提供する設計にしてください",
+    "detectionHints": [
+      "購入後メッセージ",
+      "選択の肯定",
+      "返品保証",
+      "バイヤーズリモース"
+    ],
+    "relatedPrinciples": [
+      "commitment-consistency",
+      "loss-aversion",
+      "framing-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Festinger, L.",
+          "year": 1957,
+          "title": "A Theory of Cognitive Dissonance",
+          "journal": "Stanford University Press"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "mere-exposure",
+    "name": {
+      "ja": "単純接触効果",
+      "en": "Mere Exposure Effect"
+    },
+    "aliases": [
+      "ザイアンスの法則"
+    ],
+    "category": "emotion",
+    "tags": [
+      "感情",
+      "親密度",
+      "ブランディング"
+    ],
+    "summary": "繰り返し接触するだけで好意度が増す",
+    "description": "1968年にロバート・ザイアンスが発表した効果で、特定の刺激に繰り返し接するだけで、その刺激に対する好意度が高まるという現象です。意識的な評価を伴わなくても効果が生じます。ブランディングでは、ロゴやUIの一貫性による繰り返し接触が親密感を生み、ブランドへの好意度を高めます。リターゲティング広告もこの原理を活用していますが、過度な繰り返しは逆効果です。",
+    "origin": {
+      "researcher": "Robert Zajonc",
+      "year": 1968
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Appleのブランド広告",
+        "description": "製品デザインとブランドメッセージの一貫性で、繰り返し接触による好意度を構築。"
+      },
+      {
+        "type": "bad",
+        "title": "過度なリターゲティング広告",
+        "description": "同じ広告を何度も表示。一定回数を超えると不快感（ウェアアウト効果）に。"
+      }
+    ],
+    "aiPromptTip": "単純接触効果を活用して、ブランド要素（ロゴ、色、メッセージ）をサービス全体で一貫して繰り返し提示してください",
+    "detectionHints": [
+      "ブランドの一貫性",
+      "ロゴの繰り返し",
+      "広告頻度"
+    ],
+    "relatedPrinciples": [
+      "halo-effect",
+      "aesthetic-usability",
+      "priming-effect"
+    ],
+    "references": {
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Zajonc, R.B.",
+          "year": 1968,
+          "title": "Attitudinal Effects of Mere Exposure",
+          "journal": "Journal of Personality and Social Psychology"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "doherty-threshold",
+    "name": {
+      "ja": "ドハティの閾値",
+      "en": "Doherty Threshold"
+    },
+    "aliases": [],
+    "category": "ux-laws",
+    "tags": [
+      "パフォーマンス",
+      "レスポンス",
+      "生産性"
+    ],
+    "summary": "システム応答が400ms以内だと生産性が飛躍的に向上する",
+    "description": "1982年にウォルター・ドハティとアーヴィンド・タダニがIBMシステムジャーナルで発表した研究に基づきます。コンピュータとユーザーの双方の応答時間が400ミリ秒以内であれば、ユーザーの生産性とシステムへの依存度が飛躍的に向上します。UIでは、スケルトンスクリーン、楽観的更新（Optimistic UI）、プリフェッチなどのテクニックでこの閾値を守ることが重要です。",
+    "origin": {
+      "researcher": "Walter J. Doherty & Ahrvind J. Thadani",
+      "year": 1982,
+      "paper": "The Economic Value of Rapid Response Time"
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Twitterの楽観的更新",
+        "description": "「いいね」をタップした瞬間にUIが反応。サーバー応答を待たずに即座にフィードバック。"
+      },
+      {
+        "type": "bad",
+        "title": "スピナーだけのローディング",
+        "description": "データ取得中に回転するスピナーだけが表示され、進捗や内容が不明。"
+      }
+    ],
+    "aiPromptTip": "ドハティの閾値を意識して、ユーザーの操作に対して400ms以内のフィードバックを提供してください。スケルトンスクリーンの活用も検討してください",
+    "detectionHints": [
+      "ローディング表示",
+      "応答速度",
+      "スケルトンUI",
+      "楽観的更新"
+    ],
+    "relatedPrinciples": [
+      "flow",
+      "fitts-law",
+      "jakobs-law"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/doherty-threshold/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [
+        {
+          "authors": "Doherty, W.J., & Thadani, A.J.",
+          "year": 1982,
+          "title": "The Economic Value of Rapid Response Time",
+          "journal": "IBM Systems Journal"
+        }
+      ],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "pareto-principle",
+    "name": {
+      "ja": "パレートの法則",
+      "en": "Pareto Principle"
+    },
+    "aliases": [
+      "80:20の法則"
+    ],
+    "category": "ux-laws",
+    "tags": [
+      "優先順位",
+      "効率化",
+      "設計戦略"
+    ],
+    "summary": "結果の80%は原因の20%から生じる",
+    "description": "イタリアの経済学者ヴィルフレド・パレートが発見した法則で、多くの事象において結果の大部分（約80%）は原因の一部（約20%）に起因するという経験則です。UIデザインでは、ユーザーが最も頻繁に使う20%の機能に最大の注力をし、残りの80%はセカンダリな位置に配置する設計戦略に応用されます。分析データに基づいて最も使われている機能を特定し、優先的に最適化することが効果的です。",
+    "origin": {
+      "researcher": "Vilfredo Pareto",
+      "year": 1896
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "Microsoftリボンの主要コマンド",
+        "description": "最も使われるコマンドをリボンの目立つ位置に配置し、使用頻度の低い機能はサブメニューに。"
+      },
+      {
+        "type": "bad",
+        "title": "すべての機能が同じ重み",
+        "description": "100以上の機能がすべて同じサイズ・位置で表示。重要な機能が埋もれる。"
+      }
+    ],
+    "aiPromptTip": "パレートの法則を意識して、よく使われる20%の機能を最もアクセスしやすい位置に配置してください",
+    "detectionHints": [
+      "主要機能の強調度",
+      "機能の階層構造",
+      "使用頻度分析"
+    ],
+    "relatedPrinciples": [
+      "hicks-law",
+      "occams-razor",
+      "fitts-law"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/pareto-principle/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "postels-law",
+    "name": {
+      "ja": "ポステルの法則",
+      "en": "Postel's Law"
+    },
+    "aliases": [
+      "堅牢性の原則"
+    ],
+    "category": "ux-laws",
+    "tags": [
+      "入力設計",
+      "バリデーション",
+      "寛容性"
+    ],
+    "summary": "受け入れるものには寛大に、送り出すものには厳密に",
+    "description": "1980年にジョン・ポステルがTCPの仕様書（RFC 761）で述べた原則で、「送信するものは厳密に、受信するものは寛容に」という設計思想です。UIデザインでは、入力に対して柔軟で寛容であること（電話番号のハイフン有無どちらも受け付ける、大文字小文字を区別しない検索）、出力は標準化された一貫したフォーマットにすることを意味します。",
+    "origin": {
+      "researcher": "Jon Postel",
+      "year": 1980
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "柔軟な電話番号入力",
+        "description": "「090-1234-5678」「09012345678」「090 1234 5678」のどの形式でも受け付け、システム内で統一フォーマットに変換。"
+      },
+      {
+        "type": "bad",
+        "title": "厳格すぎるバリデーション",
+        "description": "メールアドレスに+記号が含まれると弾かれる。技術的には有効なアドレスなのに入力できない。"
+      }
+    ],
+    "aiPromptTip": "ポステルの法則を意識して、ユーザーの入力は柔軟に受け付け、システム内部で標準化する設計にしてください",
+    "detectionHints": [
+      "入力バリデーション",
+      "フォーマットの柔軟性",
+      "自動変換"
+    ],
+    "relatedPrinciples": [
+      "teslers-law",
+      "jakobs-law",
+      "cognitive-load"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/postels-law/",
+      "nnGroup": [],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [],
+      "goodpatchBlog": []
+    }
+  },
+  {
+    "id": "mental-model",
+    "name": {
+      "ja": "メンタルモデル",
+      "en": "Mental Model"
+    },
+    "aliases": [],
+    "category": "ux-laws",
+    "tags": [
+      "ユーザー理解",
+      "概念モデル",
+      "UXデザイン"
+    ],
+    "summary": "ユーザーがシステムの仕組みについて持つ内的な表象",
+    "description": "ドン・ノーマンが『誰のためのデザイン？』で広めた概念で、ユーザーがシステムやプロダクトがどのように動作するかについて持つ心的なモデルです。デザイナーの意図した概念モデルとユーザーのメンタルモデルのギャップが大きいほど、使いにくいUIになります。ユーザーリサーチでメンタルモデルを理解し、既存の理解に合わせたインターフェースを設計することが、直感的なUXの鍵です。",
+    "origin": {
+      "researcher": "Don Norman",
+      "year": 1988
+    },
+    "uiExamples": [
+      {
+        "type": "good",
+        "title": "ファイルシステムのフォルダ構造",
+        "description": "物理的な書類棚のメタファーを使い、ユーザーの既存のメンタルモデルに一致。"
+      },
+      {
+        "type": "bad",
+        "title": "独自の概念体系のアプリ",
+        "description": "一般的な用語と異なる独自の命名体系を使い、ユーザーが新しい概念を学び直す必要がある。"
+      }
+    ],
+    "aiPromptTip": "メンタルモデルを意識して、ユーザーが既に理解している概念やメタファーに合わせたUI設計にしてください",
+    "detectionHints": [
+      "概念の一致度",
+      "メタファーの使用",
+      "用語の直感性",
+      "デザインパターンの親和性"
+    ],
+    "relatedPrinciples": [
+      "jakobs-law",
+      "paradox-of-active-user",
+      "cognitive-load"
+    ],
+    "references": {
+      "lawsOfUx": "https://lawsofux.com/mental-model/",
+      "nnGroup": [
+        {
+          "title": "Mental Models and User Experience Design",
+          "url": "https://www.nngroup.com/articles/mental-models/",
+          "type": "article"
+        }
+      ],
+      "hcdNet": [],
+      "academicPapers": [],
+      "books": [
+        {
+          "title": "The Design of Everyday Things",
+          "author": "Don Norman"
+        }
+      ],
+      "goodpatchBlog": [
+        {
+          "title": "メンタルモデルとは何か？",
+          "url": "https://goodpatch.com/blog/design-mentalmodel"
+        }
+      ]
+    }
+  }
+]
